@@ -81,8 +81,12 @@ WSGI_APPLICATION = 'captain.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dtuqajfc',
+        'USER': 'dtuqajfc',
+        'PASSWORD': 'jgXcF1zvSnNRZ1Ak8b_Dy68A3GVLsWF-',
+        'HOST': 'balarama.db.elephantsql.com',
+        'PORT': '5432'
     }
 }
 

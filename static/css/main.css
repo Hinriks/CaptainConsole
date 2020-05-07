@@ -1,3 +1,14 @@
-.candy{
-    border-bottom: solid 2px black;
+.products {
+    display:flex;
+    flex-wrap: wrap;
+}
+.product {
+    flex-basis: 20%;
+}
+.product:hover {
+    box-shadow: 1px 1px 1px black;
+}
+.product-img {
+    max-height: 150px;
+    max-width: 150px;
 }
