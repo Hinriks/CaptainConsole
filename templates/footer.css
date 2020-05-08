@@ -1,0 +1,39 @@
+
+body {
+    font-family: 'Montserrat';
+}
+
+img {
+    width: 45px;
+    height: auto;
+
+}
+
+#footer {
+        display: flex;
+        background-color: #35444d;
+        color: white;
+        width: 100%;
+        margin: auto;
+    }
+
+#aboutUs {
+    display: table-cell;
+    padding-left: 25px;
+    text-align: left;
+    width: 50%;
+}
+
+#followUs {
+    display: table-cell;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+}
+
+#contact {
+    display: table-cell;
+    padding-right: 25px;
+    text-align: right;
+    width: 50%;
+}
