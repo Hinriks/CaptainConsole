@@ -1,10 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% load static %}
+<link href=" {% static 'footer.css' %}" rel="stylesheet" type="text/css" >
+<div id="footer">
+    <div id="aboutUs">
+        <h3>ABOUT US</h3>
+        <p>Opening Hours<br>Staff</p>
+    </div>
+
+    <div id="followUs">
+        <h4>Follow us on social media!</h4>
+        <img src="{% static 'img/faceb_logo.png' %}" alt="facebook">
+        <img src="{% static 'img/insta_logo.png' %}" alt="instagram">
+        <img src="{% static 'img/twitter_logo.png' %}" alt="twitter">
+    </div>
+
+    <div id="contact">
+        <h3>CONTACT US</h3>
+        <p>Captain Console ehf.<br>Tel: 5812345<br>Kringlan 1<br>103 Reykjavík<br>SSN: 123456-7890<br><a href="mailto:captainconsole.com">captainconsole.com</a></p>
+
+    </div>
+</div>
 
 </body>
 </html>
