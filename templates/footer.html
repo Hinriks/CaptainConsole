@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="footer.css" rel="stylesheet" type="text/css" >
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-</head>
-<body>
-
+{% load static %}
+<link href=" {% static 'footer.css' %}" rel="stylesheet" type="text/css" >
 <div id="footer">
     <div id="aboutUs">
         <h3>ABOUT US</h3>
@@ -17,9 +8,9 @@
 
     <div id="followUs">
         <h4>Follow us on social media!</h4>
-        <img src="faceb_logo.png" alt="facebook">
-        <img src="insta_logo.png" alt="instagram">
-        <img src="twitter_logo.png" alt="twitter">
+        <img src="{% static 'img/faceb_logo.png' %}" alt="facebook">
+        <img src="{% static 'img/insta_logo.png' %}" alt="instagram">
+        <img src="{% static 'img/twitter_logo.png' %}" alt="twitter">
     </div>
 
     <div id="contact">
@@ -31,5 +22,3 @@
 
 </body>
 </html>
-=======
->>>>>>> 340203fc8b2d9227153fe763514567b5c096a40a
