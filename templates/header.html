@@ -3,8 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <div class="container">
+
+    <!-- Brand -->
+    <div>
+        <h1>
+            <a href="/">
+                <img id="logo" src="CaptainConsole.png" alt="Captain Console">
+            </a>
+        <h1>
+    </div>
+
+    <!-- Collapse -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div>
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a class="nav-link waves-effect" id="cartcontainer">
+                <div class="img-with-text">
+                    <span class="badge red z-depth-1 mr-1"> 1 </span>
+                    <img id="carticon" src="cart.png" alt="Cart">
+                    <p id="cart">Cart</p>
+                </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.facebook.com/mdbootstrap" class="nav-link waves-effect" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          
+        </ul>
+
+    </div>
+
 
 </body>
 </html>
