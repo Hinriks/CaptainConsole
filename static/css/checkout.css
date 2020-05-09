@@ -1,0 +1,28 @@
+
+.titleText {
+    text-align: center;
+}
+
+.mainInfo {
+    margin-left: 20px;
+}
+
+.extraInfo {
+    margin-left: 20px;
+}
+
+.buttons {
+    padding: 10px;
+}
+
+.form {
+    width: 600px;
+    margin: auto;
+    display: block;
+}
+
+body {
+    width: 100%;
+}
+
+
