@@ -10,4 +10,6 @@
     {% for product_image in product.productimage_set.all  %}
        <img class="product-img" src="{{ product_image.image }}" alt="">
     {% endfor %}
+    <a href="{% url 'delete_product' product.id %}" class="block btn btn-primary">Delete Product</a>
+    <a href="{% url 'update_product' product.id %}" class="block btn btn-primary">Update Product</a>
 {% endblock content %}
