@@ -1,0 +1,44 @@
+
+.titleText {
+    text-align: center;
+}
+
+.productImg {
+    width: 150px;
+    height: 150px;
+    margin: 10px 30px 10px 3px;
+    padding: 10px 0px 10px 3px;
+}
+
+.colLeft {
+    text-align: center;
+}
+
+.deleteButton {
+    text-align: right;
+}
+
+.bottomCols div {
+    position:relative;
+    width:100px;
+    height:110px;
+}
+
+.bottomCols div span{
+    position:absolute;
+    bottom:0;
+}
+
+.price {
+    background-color: #579DB8;
+    padding: 15px 15px 15px 15px;
+}
+
+.productName {
+    padding-top: 15px;
+}
+
+.checkout {
+    position:relative;
+    left: 50%;
+}
