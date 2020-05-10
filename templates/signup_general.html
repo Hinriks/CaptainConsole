@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="../static/css/signup.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
@@ -15,23 +15,45 @@
     <a href="#" class="btn btn-primary">General</a>
     <a href="#" class="btn btn-primary">Billing</a>
     <a href="#" class="btn btn-primary">Finish</a>
-</div><br>
+</div>
 
-<div class="form-group">
-    <label for="formGroupExampleInput">Full name</label>
-    <input class="form-control" type="text" placeholder="FULL NAME"><br>
-    <label for="formGroupExampleInput">Email address</label>
-    <input class="form-control" type="text" placeholder="EMAIL ADDRESS"><br>
-    <label for="formGroupExampleInput">Username</label>
-    <input class="form-control" type="text" placeholder="USERNAME"><br>
-    <label for="formGroupExampleInput">Password</label>
-    <input class="form-control" type="text" placeholder="PASSWORD"><br>
-    <label for="formGroupExampleInput">Confirm Password</label>
-    <input class="form-control" type="text" placeholder="CONFIRM PASSWORD"><br>
-    <label for="formGroupExampleInput">Phone Number</label>
-    <input class="form-control" type="text" placeholder="PHONE NUMBER"><br>
+<div class="row">
 
-    <label for="formGroupExampleInput">Date of Birth</label><br>
+    <div class="col-md-12 top-space">
+        <label for="formGroupExampleInput">Full name</label>
+        <input class="form-control" type="text" placeholder="FULL NAME">
+    </div>
+
+    <div class="col-md-12">
+        <label for="formGroupExampleInput">Email address</label>
+        <input class="form-control" type="text" placeholder="EMAIL ADDRESS">
+    </div>
+
+    <div class="col-md-12">
+        <label for="formGroupExampleInput">Username</label>
+        <input class="form-control" type="text" placeholder="USERNAME">
+    </div>
+
+    <div class="col-md-12">
+        <label for="formGroupExampleInput">Password</label>
+        <input class="form-control" type="text" placeholder="PASSWORD">
+    </div>
+
+    <div class="col-md-12">
+        <label for="formGroupExampleInput">Confirm Password</label>
+        <input class="form-control" type="text" placeholder="CONFIRM PASSWORD">
+    </div>
+
+    <div class="col-md-12">
+        <label for="formGroupExampleInput">Phone Number</label>
+        <input class="form-control" type="text" placeholder="PHONE NUMBER">
+    </div>
+
+    <div class="col-md-12">
+        <label for="formGroupExampleInput">Date of Birth</label>
+    </div>
+
+    <div class="col-md-12">
 
     <select name="date">
         <option value="1">1</option>
@@ -95,12 +117,18 @@
         <option value="oct">1999</option>
         <option value="nov">2000</option>
         <option value="dec">2001</option>
-    </select><br><br>
+    </select>
 
-<div class="form-check">
+    </div>
+
+<div class="col-md-12 form-check general">
     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
     I want to receive exclusive offers and new product releases via email subscription.
 </div><br>
     <a href="#" class="btn btn-primary col-md-6 col-md-offset-3">NEXT</a></div>
 
-</div></div>
+</div>
+
+</div>
+
+</body>
