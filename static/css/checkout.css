@@ -1,0 +1,43 @@
+
+.titleText {
+    text-align: center;
+}
+
+.mainInfo {
+    margin-left: 20px;
+}
+
+.extraInfo {
+    margin-left: 20px;
+}
+
+.buttons {
+    padding: 10px;
+}
+
+.form {
+    width: 600px;
+    margin: auto;
+    display: block;
+    padding-left: 50px;
+}
+
+.placeOrder {
+    margin: auto;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.box {
+    padding: 5px;
+}
+
+.bottomBox {
+    padding-bottom: 25px;
+}
+
+body {
+    width: 100%;
+}
+
+
