@@ -16,6 +16,12 @@ __pycache__/
 *$py.class
 *.pyc
 
+.vscode/
+.vscode\
+\.vscode\*
+.idea
+.idea/
+
 # C extensions
 *.so
 
