@@ -1,54 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-</head>
+  <meta charset="UTF-8">
+  <title>Header</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar topbar" id="headercolor">
     <div class="container">
 
-    <!-- Brand -->
+    <!-- Logo -->
     <div>
-        <h1>
-            <a href="/">
-                <img id="logo" src="CaptainConsole.png" alt="Captain Console">
-            </a>
-        <h1>
+      <a href="/">
+        <img id="logo" src="CaptainConsole.png" alt="Captain Console">
+      </a>
+    </div>  
+
+    <div class="namesearch">
+      <p id="companyname">CAPTAIN CONSOLE</p>
+      <input id="search" type="text" placeholder=" Search..">
     </div>
 
-    <!-- Collapse -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div>
         <!-- Right -->
         <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item profile">
+            {% block content %}
+            {% endblock %}
+          </li>
           <li class="nav-item">
             <a class="nav-link waves-effect" id="cartcontainer">
-                <div class="img-with-text">
-                    <span class="badge red z-depth-1 mr-1"> 1 </span>
-                    <img id="carticon" src="cart.png" alt="Cart">
-                    <p id="cart">Cart</p>
-                </div>
+              <div class="img-with-text" id="cartimg">
+                <img id="carticon" src="cart.png" alt="Cart">
+                <p id="cart">Cart</p>
+              </div>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="https://www.facebook.com/mdbootstrap" class="nav-link waves-effect" target="_blank">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </li>
-          
         </ul>
-
-    </div>
-
-
+      </div>
+  </nav>
 </body>
 </html>
