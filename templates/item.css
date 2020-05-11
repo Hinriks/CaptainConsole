@@ -6,9 +6,10 @@
 }
 
 #desctext {
-    margin:2.5em 0;/* FF for instance */
+    margin:2.5em 0;
     padding-left: 455px;
     width: 100%;
+    line-height:5em;
 }
 
 
@@ -30,10 +31,8 @@
 }
 
 #addtocart {
-    background-color: #87B5C6;
-    height: 75px;
+    color: #87B5C6;
     font-size: medium;
-    margin-top: 0.5%;
 }
 #cartdiv {
     margin: 0px auto;
