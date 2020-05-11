@@ -1,0 +1,39 @@
+
+.titleText {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.extraInfo {
+    text-align: center;
+}
+
+.arrivalInfo {
+    text-align: center;
+    padding-top: 20px;
+    color: #0a568c;
+}
+
+.orderSummaryText {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.shippingPrice {
+    text-align: right;
+}
+
+.subtotalPrice {
+    text-align: right;
+}
+
+.totalPrice {
+    text-align: right;
+}
+
+.orderDiv {
+    background-color: #579DB8;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

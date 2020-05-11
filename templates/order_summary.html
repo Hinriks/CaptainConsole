@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Summary</title>
+    <link href="../static/css/order_summary.css" rel="stylesheet" type="text/css" >
+    <link href="../static/css/shopping_cart.css" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <h1 class="titleText">Thank you for your order!</h1>
+    <h5 class="extraInfo">Your order has been placed and is being processed.</h5>
+    <h5 class="extraInfo">You will receive and email with the order details.</h5>
+    <h3 class="arrivalInfo">Your order is estimated to arrive at Laugavegur 1 in 3-5 business days.</h3>
+
+    <h2 class="orderSummaryText">Order summary</h2>
+    <hr>
+
+    <div class="container col-md-8 col-md-offset-2">
+        <div class="row product">
+            <div class="col-sm-4">
+                <div class="colLeft"><img src="../static/img/nes_console.png" class="productImg" alt="nes console"></div>
+            </div>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-10"><h3 class="productName">Nintendo Entertainment System</h3></div>
+                </div>
+                <div class="row bottomCols">
+                    <div class="col-sm-3"><span><h5 class="price">5.000 kr</h5></span></div>
+                    <div class="col-sm-4">
+                        <span>
+                            Quantity:<p id="quantity">1</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h4 class="subtotal">Subtotal</h4>
+            </div>
+            <div class="col-sm-6">
+                <h4 class="subtotalPrice">5.000 kr</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4 class="shipping">Shipping</h4>
+            </div>
+            <div class="col-sm-6">
+                <h4 class="shippingPrice">490 kr</h4>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h4 class="total">Total</h4>
+            </div>
+            <div class="col-sm-6">
+                <h4 class="totalPrice">5.490 kr</h4>
+            </div>
+        </div>
+
+        <hr>
+    </div>
+
+    <div class="container col-md-2 col-md-offset-5">
+        <div class="row">
+            <div class="col-md-12 orderDiv">
+                <h4>Order number:</h4>
+                <h4 id="orderNr">11556</h4>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
