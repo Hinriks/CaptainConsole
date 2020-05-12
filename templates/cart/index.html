@@ -52,7 +52,7 @@
                 <div class="col-sm-8">
                     <div class="row">
                         <div class="col-sm-10"><h3 class="productName">{{cartitem.product.name}}</h3></div>
-                        <div class="col-sm-2"><button class="deleteButton" type="submit">X</button></div>
+                        <div class="col-sm-2"><a href="{% url 'delete_cartitem' cartitem.id %}"><button class="deleteButton" type="submit">X</button></a></div>
                     </div>
                     <div class="row bottomCols">
                         <div class="col-sm-3"><span><h5 class="price">{{cartitem.product.price}}.-kr</h5></span></div>
@@ -80,8 +80,13 @@
             <hr>
             {% endfor %}
         </div>
-
-        <button type="button" class="btn btn-primary checkout">CHECKOUT</button>
+        {% if not cartitems %}
+            <h1>CART IS EMPTY</h1>
+        {% else %}
+            <h3> Total: {{cartitems.first.cart.total}}
+            <button type="button" class="btn btn-primary checkout">CHECKOUT</button>
+        {% endif %} 
+       
 
     </body>
 {% endblock %}

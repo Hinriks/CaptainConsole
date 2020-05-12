@@ -33,7 +33,7 @@
           {% endif %}
       </li>
       <li class="nav-item">
-        <a class="nav-link waves-effect" id="cartcontainer">
+        <a href ="{% url 'cart-index' %}" class="nav-link waves-effect" id="cartcontainer">
           <div class="img-with-text" id="cartimg">
             <img id="carticon" src="{% static 'img/cart.png' %}" alt="Cart">
             <p id="cart">Cart</p>

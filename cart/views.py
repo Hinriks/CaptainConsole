@@ -21,25 +21,48 @@ def add_to_cart(request, id):
             new_cart = Cart()
             new_cart.user = user
             new_cart.save()
+        #check if product is in cart
+        cartitems = user.cart.cart_item.all()
+        added = False
+        for cartitem in cartitems:
+            if cartitem.product.id == product_id:
+                cartitem.quantity += 1 #TODO her tharf ad breita hvad morg
+                cartitem.save()
+                added = True
 
-        product = Product.objects.get(pk=product_id)
-        cart_item = CartItem()
-        cart_item.product = product
-        cart_item.cart = user.cart
-        cart_item.quantity = 1
-        cart_item.line_total = cart_item.product.price * cart_item.quantity
-        cart_item.save()
+
+        if not added:
+            product = Product.objects.get(pk=product_id)
+            cart_item = CartItem()
+            cart_item.product = product
+            cart_item.cart = user.cart
+            cart_item.quantity = 1 #TODO her tharf ad breita hvad morg
+            cart_item.line_total = cart_item.product.price * cart_item.quantity
+            cart_item.save()
+
+        calc_total(user.cart)
             
-    return render(request, 'cart/index.html')
+    return redirect(view_cart)
 
+def calc_total(cart):
+    cartitems = cart.cart_item.all()
+    for cartitem in cartitems:
+        cart.total += cartitem.quantity * cartitem.product.price
+    cart.save()
+    
+
+
+def delete_cartitem(request, id):
+    cartitem = get_object_or_404(CartItem, pk=id)
+    cartitem.delete()
+    return redirect(view_cart)
 
 def view_cart(request):
     username_from_request = request.user.username
     user = User.objects.get(username=username_from_request)
     cartitems = user.cart.cart_item.all()
-    print(cartitems)
     context = {'cartitems': cartitems}
-    print(context)
+    calc_total(user.cart)
     return render(request, 'cart/index.html', context)
 
 
