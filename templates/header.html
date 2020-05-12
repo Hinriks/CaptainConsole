@@ -1,46 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+{% load static %}
 <head>
   <meta charset="UTF-8">
-  <title>Header</title>
-  <link rel="stylesheet" href="bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/header.css' %}">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  </head>
-<body>
+</head>
   <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar topbar" id="headercolor">
-    <div class="container">
+<nav class="navbar navbar-expand-lg navbar-light white scrolling-navbar topbar" id="headercolor">
+<div class="container">
 
-    <!-- Logo -->
-    <div>
-      <a href="/">
-        <img id="logo" src="CaptainConsole.png" alt="Captain Console">
-      </a>
-    </div>  
+<!-- Logo -->
+<div>
+  <a href="/">
+    <img id="logo" src="{% static 'img/CaptainConsole.png' %}" alt="Captain Console">
+  </a>
+</div>
 
-    <div class="namesearch">
-      <p id="companyname">CAPTAIN CONSOLE</p>
-      <input id="search" type="text" placeholder=" Search..">
-    </div>
+<div class="namesearch">
+  <p id="companyname">CAPTAIN CONSOLE</p>
+  <input id="search" type="text" placeholder=" Search..">
+</div>
 
-        <!-- Right -->
-        <ul class="navbar-nav nav-flex-icons">
-          <li class="nav-item profile">
-            {% block content %}
-            {% endblock %}
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-effect" id="cartcontainer">
-              <div class="img-with-text" id="cartimg">
-                <img id="carticon" src="cart.png" alt="Cart">
-                <p id="cart">Cart</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-  </nav>
-</body>
-</html>
+    <!-- Right -->
+    <ul class="navbar-nav nav-flex-icons">
+      <li class="nav-item profile">
+          {% if request.user.is_authenticated %}
+              <h1>Logged in</h1>
+              <!-- TODO Setja account logged in -->
+          {% else %}
+              {% include 'account.html' %}
+          {% endif %}
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect" id="cartcontainer">
+          <div class="img-with-text" id="cartimg">
+            <img id="carticon" src="{% static 'img/cart.png' %}" alt="Cart">
+            <p id="cart">Cart</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

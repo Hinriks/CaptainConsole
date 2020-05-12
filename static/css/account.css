@@ -1,0 +1,37 @@
+#accountdiv {
+    justify-content: left;
+    height: 75px;
+    background-color:#6c757d;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+#accountcontainer {
+    background-color:#6c757d;
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.accounticon {
+    width: 60px;
+    padding-top: 20px;
+    padding-left: 10px;
+    float: left;
+}
+
+#logintext {
+    font-size: xx-large;
+    color: #000000;
+    margin-bottom: 0px;
+    padding-top: 7px;
+    padding-left:70px
+}
+  
+#signuptext {
+    font-size: medium;
+    color: #000000;
+    padding-left:70px
+}

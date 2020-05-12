@@ -1,6 +1,8 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 
+{% comment %}
     <h1> {{product.name}} </h1>
     <p> {{product.description}} </p>
     <p> {{product.price}}.-kr </p>
@@ -13,4 +15,27 @@
     <a href="{% url 'delete_product' product.id %}" class="block btn btn-primary">Delete Product</a>
     <a href="{% url 'update_product' product.id %}" class="block btn btn-primary">Update Product</a>
     <a href="{% url 'add_to_cart' product.id %}" class="block btn btn-primary">Add to cart</a>
+{% endcomment %}
+
+<head>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/item.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div >
+        <img class="itemicon" src="{{ product.productimage_set.first.image }}" alt="Profile">
+        <h1 id="itemtitle">{{product.name}}</h1>
+        <div>
+        <h3 id="desctext">{{product.description}}</h3>
+        <p class="button" id="price">{{product.price}}.-kr</p>
+        <p class="button" id="addtocart"><a href="{% url 'add_to_cart' product.id %}">Add to Cart</a></p>
+        </div>
+    </div>
+    <a href="{% url 'delete_product' product.id %}" class="block btn btn-primary">Delete Product</a>
+    <a href="{% url 'update_product' product.id %}" class="block btn btn-primary">Update Product</a>
+    <a href="{% url 'add_to_cart' product.id %}" class="block btn btn-primary">Add to cart</a>
+</body>
 {% endblock content %}
