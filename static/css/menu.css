@@ -1,0 +1,18 @@
+#ddtext {
+    font-size: x-large;
+    color: #000000;
+    /*padding-right: 3em;
+    padding-left: 3em;*/
+    padding-right: 1em;
+    padding-left: 1em;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.bg-color {
+    background-color: #227C9E;
+}
+.header-nav {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}

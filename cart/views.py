@@ -7,11 +7,8 @@ from cart.models import CartItem
 # Create your views here.
 
 
-
 def index(request):
     return render(request, 'cart/index.html')
-
-
 
 
 def add_to_cart(request, id):
@@ -35,6 +32,7 @@ def add_to_cart(request, id):
             
     return render(request, 'cart/index.html')
 
+
 def view_cart(request):
     username_from_request = request.user.username
     user = User.objects.get(username=username_from_request)
@@ -44,9 +42,11 @@ def view_cart(request):
     print(context)
     return render(request, 'cart/index.html', context)
 
+
 def order(request):
     #TODO Setja upp þannig að það sé stage 1 og 2 af order en halda sama url. Bannaður beinn aðgangur
     return render(request, 'order/index.html')
+
 
 def receipt(request, id):
     #TODO Ef "receipt.owner = user" þá kemstu á þessa síðu annars aðgangur bannaður (403)
