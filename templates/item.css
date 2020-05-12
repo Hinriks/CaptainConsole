@@ -1,0 +1,39 @@
+.itemicon {
+    width: 455px;
+    padding-top: 6%;
+    padding-left: 4%;
+    float: left;
+}
+
+#desctext {
+    margin:2.5em 0;
+    padding-left: 455px;
+    width: 100%;
+    line-height:5em;
+}
+
+
+.button {
+    padding: 25px;
+    font-size: x-large;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    margin: auto;
+    float: left;
+}
+
+#price {
+    background-color: #599DB6;
+    margin-right: 1%;
+    margin-left: 50%;
+}
+
+#addtocart {
+    color: #87B5C6;
+    font-size: medium;
+}
+#cartdiv {
+    margin: 0px auto;
+}

@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'product.apps.ProductConfig',
-    'user.apps.UserConfig',
     'cart',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'captain.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dtuqajfc',
-        'USER': 'dtuqajfc',
-        'PASSWORD': 'jgXcF1zvSnNRZ1Ak8b_Dy68A3GVLsWF-',
+        'NAME': 'glhpiwvk',
+        'USER': 'glhpiwvk',
+        'PASSWORD': '3F0ImAnzqw3V9n7iFZ6ZHuUoQMjspjnX',
         'HOST': 'balarama.db.elephantsql.com',
         'PORT': '5432'
     }
@@ -129,3 +129,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
 ]
+
+
+AUTH_USER_MODEL = 'user.User'

@@ -1,0 +1,93 @@
+#logo {
+  width: 120px;
+}
+
+#headercolor {
+  background-color: #34404F;
+}
+
+li {
+  margin-top: 5%;
+}
+
+#search {
+  height: 50px;
+  width: 300px;
+  font-size: x-large;
+  border: 0em;
+  background-color: #5e7684;
+}
+
+.namesearch {
+  font-family: 'Press Start 2P', cursive;
+  font-size: xx-large;
+  color: #ffffff;
+  width: 250px;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+::placeholder {
+  color: #000000;
+}
+
+
+/* Cart */
+#carticon {
+  width: 50px;
+}
+#cartcontainer {
+  background-color:#87ADB9;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+}
+#cart {
+  color: #000000;
+}
+
+/* Image with text below */
+.img-with-text {
+  margin:  5px auto;
+  text-align: center;
+  width: 50px;
+}
+
+
+@media screen and (min-width: 1201px) {
+  .namesearch {
+    margin-left: -100px;
+  }
+
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1001px) {
+  .namesearch {
+    margin-left: -75px;
+  }
+
+}
+
+
+@media screen and (max-width: 1000px) {
+  #companyname {
+    font-size: medium;
+  }
+
+  #logo {
+    width: 0px;
+  }
+
+  .namesearch {
+    margin-left: -200px;
+  }
+
+  #cartcontainer {
+    background-color:#87ADB9;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+  }
+}
