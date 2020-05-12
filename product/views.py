@@ -5,6 +5,10 @@ from product.models import Product, ProductImage
 
 
 # Create your views here.
+def homepage(request):
+    return render(request, 'home/index.html')
+
+
 def index(request):
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
@@ -24,6 +28,7 @@ def get_product_by_id(request, id):
     context = {'product': get_object_or_404(Product, pk=id)}
     return render(request, 'product/product_details.html',context)
 
+
 def create_product(request):
     if request.method == 'POST':
         form = ProductCreateForm(data=request.POST)
@@ -38,10 +43,12 @@ def create_product(request):
         'form': form
     })
 
+
 def delete_product(request, id):
     product = get_object_or_404(Product, pk=id)
     product.delete()
     return redirect('product-index')
+
 
 def update_product(request, id):
     instance = get_object_or_404(Product, pk=id)

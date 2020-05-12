@@ -1,16 +1,17 @@
+{% load static %}
 <!Doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Account</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/account.css' %}">
 </head>
 <body>
     <a id="accountcontainer" href="#">
         <div id="accountdiv">
-            <img class="accounticon" src="ProfileIcon.png" alt="Profile">
+            <img class="accounticon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">
             <p id="logintext">Log in</p>   
             <p id="signuptext">Sign up</p>                 
         </div>

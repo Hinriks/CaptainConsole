@@ -16,10 +16,9 @@
 }
 
 .accounticon {
-    width: 50px;
-    height: 50px;
-    margin-top: 20px;
-    margin-left: 10px;
+    width: 60px;
+    padding-top: 20px;
+    padding-left: 10px;
     float: left;
 }
 

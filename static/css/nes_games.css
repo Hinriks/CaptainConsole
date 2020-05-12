@@ -3,15 +3,12 @@
     background-color: #579DB8;
     display: flex;
     width: 1125px;
-    margin-left: 180px;
     padding: 10px 20px 10px 20px;
 }
 
 .products {
     display: flex;
-    padding: 10px 20px 10px 20px;
-    width: 80%;
-    margin-left: 170px;
+    justify-content: space-between;
 }
 
 .price {
@@ -29,7 +26,5 @@
 .image_games {
     width: 250px;
     height: 250px;
-    margin: 10px 30px 10px 3px;
-    padding: 10px 0px 10px 3px;
 }
 

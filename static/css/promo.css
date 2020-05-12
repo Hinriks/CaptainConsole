@@ -3,9 +3,10 @@
     box-sizing: content-box;
     width: 80%;
     margin: auto;
+    padding-bottom: 20px;
 }
 
-img {
+#promo img {
     height:350px;
     width:50%;
 }
