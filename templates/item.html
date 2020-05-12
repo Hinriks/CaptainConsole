@@ -12,15 +12,13 @@
 </head>
 <body>
     <div >
-        <img class="itemicon" src="NES.jpg" alt="Profile">
-        <h1 id="itemtitle">Nintendo Entertainment System</h1> 
+        <img class="itemicon" src="{{ product.productimage_set.first.image }}" alt="Profile">
+
+        <h1 id="itemtitle">{% product.name %}</h1> 
         <div>  
-        <h3 id="desctext">Includes a standard HDMI cable<br><br>
-        Comes with one old school, grey colored NES Classic Controller and an AC adapter<br><br>
-        Also compatible with Classic Controller and Classic Controller Pro. <br><br>
-        Additional NES Classic Controllers will be sold separately</h3>                 
-        <p class="button" id="price">5000kr</p>
-        <p class="button" id="addtocart"><a>Add to Cart</a></p>
+        <h3 id="desctext">{% product.description %}</h3>                 
+        <p class="button" id="price">{% product.price %}</p>
+        <p class="button" id="addtocart"><button type="button" class="btn btn-primary">Add to Cart</button></p>
         </div>
     </div>
 </body>
