@@ -2,28 +2,8 @@
 {% load static %}
 {% block content %}
 
-{% comment %}
-    <h1> {{product.name}} </h1>
-    <p> {{product.description}} </p>
-    <p> {{product.price}}.-kr </p>
-    <p> {{product.category}} </p>
-    <p> {{product.manufacturer}} </p>
-
-    {% for product_image in product.productimage_set.all  %}
-       <img class="product-img" src="{{ product_image.image }}" alt="">
-    {% endfor %}
-    <a href="{% url 'delete_product' product.id %}" class="block btn btn-primary">Delete Product</a>
-    <a href="{% url 'update_product' product.id %}" class="block btn btn-primary">Update Product</a>
-    <a href="{% url 'add_to_cart' product.id %}" class="block btn btn-primary">Add to cart</a>
-{% endcomment %}
-
-<head>
-  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <link rel="stylesheet" href="{% static 'css/item.css' %}">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
+<link rel="stylesheet" href="{% static 'css/item.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <body>
     <div >
         <img class="itemicon" src="{{ product.productimage_set.first.image }}" alt="Profile">
