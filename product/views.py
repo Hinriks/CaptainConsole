@@ -1,19 +1,20 @@
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from product.forms.product_form import ProductCreateForm, ProductUpdateForm
-from product.models import Product, ProductImage
+from product.models import Product, ProductImage,Promo
 import random
-
-from django import template
-
-register = template.Library()
 
 
 # Create your views here.
 def homepage(request):
     random_products = get_popular_products()
     featured_products = get_featured_products()
-    context = {'popular_products': random_products, 'featured_products': featured_products}
+    promos = get_promos()
+    context = {'popular_products': random_products,
+                'featured_products': featured_products,
+                'promos':promos
+                }
+
     return render(request, 'home/index.html', context)
 
 
@@ -41,6 +42,10 @@ def get_featured_products():
     products = list(Product.objects.filter(featured=True))
     featured_products = products[:4]
     return featured_products
+
+def get_promos():
+    promos = Promo.objects.all().filter(active=True)
+    return promos
 
 
 # /product/3
@@ -83,3 +88,6 @@ def update_product(request, id):
         'form': form,
         'id': id
     })
+
+
+    
