@@ -18,6 +18,10 @@
     text-align: right;
 }
 
+.updateButton {
+    text-align: right;
+}
+
 .bottomCols div {
     position:relative;
     width:100px;
