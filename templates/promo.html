@@ -9,24 +9,17 @@
     <div id="promo" class="carousel slide" data-ride="carousel">
 
       <ol class="carousel-indicators">
-        <li data-target="#promo" data-slide-to="0" class="active"></li>
-        <li data-target="#promo" data-slide-to="1"></li>
-        <li data-target="#promo" data-slide-to="2"></li>
+        {% for i in promos %}
+          <li data-target="#promo" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %} active{% endif %}"></li>
+          {% endfor %}
       </ol>
 
       <div class="carousel-inner">
-
-        <div class="carousel-item active">
-          <img src="../static/img/nes.jpg" class="d-block w-100" alt="nintendo entertainment system">
-        </div>
-
-        <div class="carousel-item">
-          <img src="../static/img/nes_games.jpg" class="d-block w-100" alt="nes video games">
-        </div>
-
-        <div class="carousel-item">
-          <img src="../static/img/ps2.jpg" class="d-block w-100" alt="playstation 2 console">
-        </div>
+        {% for promo  in promos %}
+          <div class="carousel-item {% if forloop.first %} active{% endif %}">
+            <a href="/product/{{promo.product.id}}"> <img src="{{promo.image}}" class="d-block w-100" alt="nintendo entertainment system"></a>
+          </div>
+        {% endfor %}
 
       </div>
 

@@ -86,7 +86,7 @@ li profile {
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) and (min-width: 801px) {
   #companyname {
     font-size: medium;
   }
@@ -99,10 +99,19 @@ li profile {
     margin-left: -200px;
   }
 
-  #cartcontainer {
-    background-color:#87ADB9;
-    border-radius: 10px;
-    width: 100px;
-    height: 100px;
+}
+
+@media screen and (max-width: 800px) {
+  #companyname {
+    font-size: small;
   }
+
+  #logo {
+    width: 0px;
+  }
+
+  .namesearch {
+    margin-left: 0px;
+  }
+
 }
