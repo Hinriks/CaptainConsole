@@ -6,31 +6,46 @@
   background-color: #34404F;
 }
 
+::placeholder {
+  color: #000000 !important;
+  opacity: 1;
+}
+
 li profile {
   margin-top: 5%;
 }
 
 #search {
-  height: 50px;
-  width: 300px;
-  font-size: x-large;
-  border: 0em;
   background-color: #5e7684;
+  font-family: 'Press Start 2P', cursive;
+  font-size: large;
+  height: 50px;
+  width: 250px !important;
+  padding-left: 20px;
+  margin-left: 0px;
 }
 
+#submitbutton {
+  height: 50px;
+  width: 50px;
+  justify-content: left;
+  background-color: #5e7684 !important;
+  background-image: url(https://static.thenounproject.com/png/644045-200.png);
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  background-position-x: center;
+  background-position-y: center;
+  margin-left: 5px;
+}
 .namesearch {
   font-family: 'Press Start 2P', cursive;
   font-size: xx-large;
   color: #ffffff;
-  width: 250px;
+  width: 350px;
 }
 
 .container {
   max-width: 1200px;
-}
-
-::placeholder {
-  color: #000000;
 }
 
 
@@ -65,7 +80,7 @@ li profile {
 
 @media screen and (max-width: 1200px) and (min-width: 1001px) {
   .namesearch {
-    margin-left: -75px;
+    margin-left: -30px;
   }
 
 }
