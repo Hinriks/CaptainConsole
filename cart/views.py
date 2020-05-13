@@ -29,6 +29,8 @@ def add_to_cart(request, id):
                 cartitem.quantity += 1 #TODO her tharf ad breita hvad morg
                 cartitem.save()
                 added = True
+                for cartitem in cartitems:
+                    cart.total += cartitem.quantity * cartitem.product.price
 
 
         if not added:
@@ -39,15 +41,16 @@ def add_to_cart(request, id):
             cart_item.quantity = 1 #TODO her tharf ad breita hvad morg
             cart_item.line_total = cart_item.product.price * cart_item.quantity
             cart_item.save()
-
-        calc_total(user.cart)
+            for cartitem in cartitems:
+                cart.total = cartitem.quantity * cartitem.product.price
+        
             
     return redirect(view_cart)
 
 def calc_total(cart):
     cartitems = cart.cart_item.all()
     for cartitem in cartitems:
-        cart.total += cartitem.quantity * cartitem.product.price
+        cart.total = cartitem.quantity * cartitem.product.price
     cart.save()
     
 
