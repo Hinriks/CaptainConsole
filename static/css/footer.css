@@ -21,6 +21,7 @@ img {
     padding-left: 25px;
     text-align: left;
     width: 50%;
+    padding-top: 10px;
 }
 
 #followUs {
@@ -35,4 +36,5 @@ img {
     padding-right: 25px;
     text-align: right;
     width: 50%;
+    padding-top: 10px;
 }
