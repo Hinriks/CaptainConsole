@@ -26,5 +26,8 @@
 .image_consoles {
     width: 250px;
     height: 250px;
+}
 
+.item {
+    color: black;
 }
