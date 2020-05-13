@@ -2,11 +2,19 @@ from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from product.forms.product_form import ProductCreateForm, ProductUpdateForm
 from product.models import Product, ProductImage
+import random
+
+from django import template
+
+register = template.Library()
 
 
 # Create your views here.
 def homepage(request):
-    return render(request, 'home/index.html')
+    random_products = get_popular_products()
+    featured_products = get_featured_products()
+    context = {'popular_products': random_products, 'featured_products': featured_products}
+    return render(request, 'home/index.html', context)
 
 
 def index(request):
@@ -21,6 +29,18 @@ def index(request):
         return JsonResponse({ 'data': products })
     context = {'products': Product.objects.all().order_by('name')}
     return render(request, 'product/index.html', context)
+
+def get_popular_products():
+    """ Get random 4 products to display in Popular Products """
+    products = list(Product.objects.all())
+    random_products = random.sample(products, 4)
+    return random_products
+
+def get_featured_products():
+    """ Get first 4 products from featured category """
+    products = list(Product.objects.filter(featured=True))
+    featured_products = products[:4]
+    return featured_products
 
 
 # /product/3

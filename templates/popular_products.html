@@ -1,26 +1,15 @@
 {% load static %}
-
     <link href="{% static 'css/nes_games.css' %}" rel="stylesheet" type="text/css" >
 
     <h3 id="title">Popular products</h3>
     <div class="popular">
-        <a class="item" href=""><div>
-            <img class="image_games" src="../static/img/duck_hunt.jpg" alt="duck hunt"><h4 class="game_name">Duck Hunt</h4>
-            <h5 class="price">500 kr</h5>
-        </div></a>
-
-        <a class="item" href=""><div>
-            <img class="image_games" src="../static/img/tetris.jpg" alt="tetris"><h4 class="game_name">Tetris</h4>
-            <h5 class="price">700 kr</h5>
-        </div></a>
-
-        <a class="item" href=""><div>
-            <img class="image_games" src="../static/img/super_mario.jpg" alt="super mario 2"><h4 class="game_name">Super Mario 2</h4>
-            <h5 class="price">700 kr</h5>
-        </div></a>
-
-        <a class="item" href=""><div>
-            <img class="image_games" src="../static/img/castlevania.jpg" alt="castlevania"><h4 class="game_name">Castlevania</h4>
-            <h5 class="price">500 kr</h5>
-        </div></a>
+        {% for product in popular_products %}
+            <a class="item" href="/product/{{ product.id }}">
+                <div>
+                    <img class="image_games" src="{{ product.productimage_set.first.image }}" alt="{{ product.name }}">
+                    <h4 class="game_name">{{ product.name }}</h4>
+                    <h5 class="price">{{ product.price }}kr</h5>
+                </div>
+            </a>
+        {% endfor %}
     </div>

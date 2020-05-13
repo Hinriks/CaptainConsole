@@ -3,6 +3,6 @@
 {% block content %}
     {% include 'menu.html' %}
     {% include 'promo.html' %}
-    {% include 'consoles.html' %}
-    {% include 'nes_games.html' %}
+    {% include 'featured_products.html' with featured_products=featured_products %}
+    {% include 'popular_products.html' with popular_products=popular_products %}
 {% endblock %}

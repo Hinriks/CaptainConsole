@@ -4,23 +4,13 @@
 
     <h3 id="title">Featured products</h3>
     <div class="featured">
-        <a class="item" href=""><div>
-            <img class="image_consoles" src="../static/img/atari_console.jpg" alt="atari console"><h4 class="console_name">Atari 2600</h4>
-            <h5 class="price">2.000 kr</h5>
-        </div></a>
-
-        <a class="item" href=""><div>
-            <img class="image_consoles" src="../static/img/ps2_console.png" alt="ps2 console"><h4 class="console_name">PlayStation 2</h4>
-            <h5 class="price">7.000 kr</h5>
-        </div></a>
-
-        <a class="item" href=""><div>
-            <img class="image_consoles" src="../static/img/sega_console.png" alt="sega console"><h4 class="console_name">SEGA Mega Drive</h4>
-            <h5 class="price">3.000 kr</h5>
-        </div></a>
-
-        <a class="item" href=""><div>
-            <img class="image_consoles" src="../static/img/nes_console.png" alt="nes console"><h4 class="console_name">Nintendo NES console</h4>
-            <h5 class="price">5.000 kr</h5>
-        </div></a>
+        {% for product in featured_products %}
+            <a class="item" href="/product/{{ product.id }}">
+                <div>
+                    <img class="image_consoles" src="{{ product.productimage_set.first.image }}" alt="{{ product.name }}">
+                    <h4 class="console_name">{{ product.name }}</h4>
+                    <h5 class="price">{{ product.price }}</h5>
+                </div>
+            </a>
+        {% endfor %}
     </div>

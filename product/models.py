@@ -24,6 +24,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     price = models.IntegerField()
     manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE)
+    featured = models.BooleanField(default=False)
     def __str__(self):
         return self.name
 
