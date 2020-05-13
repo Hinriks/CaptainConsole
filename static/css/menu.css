@@ -9,10 +9,16 @@
 }
 
 .bg-color {
-    background-color: #227C9E;
+    background-color: #227C9E !important;
 }
+
 .header-nav {
     width:100%;
     display:flex;
     justify-content: space-between;
+}
+
+.size {
+    width: 100%;
+    font-size: large !important;
 }
