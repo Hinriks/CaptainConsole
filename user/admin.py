@@ -7,7 +7,7 @@ from django.contrib.auth.admin import UserAdmin
 class CustomUserAdmin(UserAdmin):
     fieldsets = UserAdmin.fieldsets + (
         ('Custom fields', {
-            'fields': ('address', ),
+            'fields': ('address', 'avatar_img', 'phone_number', 'date_of_birth', ),
         }),
     )
 

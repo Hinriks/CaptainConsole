@@ -3,7 +3,9 @@ html,
 body,
 .view {
   height: 100%; }
-
+html, body {
+  font-family: "Segoe UI" !important;
+}
 /* Half Page Carousel itself*/
 .carousel {
   height: 50%; }

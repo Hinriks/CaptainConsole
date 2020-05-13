@@ -13,7 +13,8 @@ register = template.Library()
 def homepage(request):
     random_products = get_popular_products()
     featured_products = get_featured_products()
-    context = {'popular_products': random_products, 'featured_products': featured_products}
+    user = get_user(request)
+    context = {'popular_products': random_products, 'featured_products': featured_products, 'user': user}
     return render(request, 'home/index.html', context)
 
 
@@ -83,3 +84,8 @@ def update_product(request, id):
         'form': form,
         'id': id
     })
+
+
+def get_user(request):
+    user = request.user
+    return user

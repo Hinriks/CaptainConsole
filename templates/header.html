@@ -26,10 +26,9 @@
     <ul class="navbar-nav nav-flex-icons">
       <li class="nav-item profile">
           {% if request.user.is_authenticated %}
-              <h1>Logged in</h1>
-              <!-- TODO Setja account logged in -->
+              {% include 'accountloggedin.html' with user=user %}
           {% else %}
-              {% include 'account.html' %}
+              {% include 'account.html'%}
           {% endif %}
       </li>
       <li class="nav-item">

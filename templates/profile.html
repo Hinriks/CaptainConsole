@@ -1,60 +1,52 @@
+{% extends 'base.html' %}
 {% load static %}
 <link href="{% static 'css/signup.css' %}" rel="stylesheet" type="text/css" >
-
+{% block content %}
 <body>
-    <div class="container col-md-8 col-md-offset-2">
+    <div class="col-md-10 offset-md-1">
 
         <div class="row">
-            <div class="col-md-10"><h2>PROFILE</h2></div>
+            <div><h2>PROFILE</h2></div>
         </div>
 
         <div class="row">
             <div class="col-md-4">
                 <div class="text-center">
-                    <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+                    <img src="{{ user.avatar_img }}" class="avatar img-circle img-thumbnail" alt="avatar">
                 </div>
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-4">
                 <label for="first_name">First name</label>
-                <input class="form-control" type="text" value="Jón" disabled>
-            </div>
+                <input class="form-control" type="text" value="{{ user.first_name }}" disabled>
 
-            <div class="col-md-8">
-                <label for="last_name">Last name</label>
-                <input class="form-control" type="text" value="Jónsson" disabled>
-            </div>
-
-            <div class="col-md-8">
                 <label>Email address</label>
-                <input type="text" class="form-control" value="jonjonsson@gmail.com" disabled>
+                <input type="text" class="form-control" value="{{ user.email }}" disabled>
+
+                <label>Username</label>
+                <input  class="form-control" type="text" value="{{ user.username }}" disabled>
+            </div>
+            <div class="col-md-4">
+                <label for="last_name">Last name</label>
+                <input class="form-control" type="text" value="{{ user.last_name }}" disabled>
+
+
+                <label>Phone Number</label>
+                <input class="form-control" type="text" value="{{ user.phone_number }}" disabled>
+
+                <label>Date of Birth</label>
+                {{ user.date_of_birth }}
+                <input  class="form-control" type="text" value="{{ user.date_of_birth }}" disabled>
             </div>
 
-            <div class="col-md-8">
-                <label>Phone Number</label>
-                <input class="form-control" type="text" value="+354-581-2345" disabled>
-            </div>
         </div>
 
         <div class="row">
-
-            <div class="col-md-12">
-                <label>Username</label>
-                <input  class="form-control" type="text" value="jonni123" disabled>
+            <div class="col-md-2 offset-md-5">
+                <a href="profile/edit"><button class="btn btn-lg btn-success" type="submit"><i class="glyphicon"></i>Edit profile</button></a>
             </div>
-
-            <div class="col-md-6">
-                <label>Date of Birth</label>
-                <input  class="form-control" type="date" value="" disabled>
-
-            </div>
-
-            <div class="col-md-12">
-            <br>
-                <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon"></i>Edit profile</button>
-            </div>
-
         </div>
 
     </div>
 </body>
+{% endblock %}
