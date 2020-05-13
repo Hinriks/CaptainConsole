@@ -17,10 +17,6 @@ def add_to_cart(request, id):
         username_from_request = request.user.username
         user = User.objects.get(username=username_from_request)
 
-        if not user.cart:
-            new_cart = Cart()
-            new_cart.user = user
-            new_cart.save()
         #check if product is in cart
         cartitems = user.cart.cart_item.all()
         added = False
