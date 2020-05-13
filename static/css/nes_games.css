@@ -1,12 +1,12 @@
 
-#games {
+#title {
     background-color: #579DB8;
     display: flex;
     width: 1125px;
     padding: 10px 20px 10px 20px;
 }
 
-.products {
+.popular {
     display: flex;
     justify-content: space-between;
 }
