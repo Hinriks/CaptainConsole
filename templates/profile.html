@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Edit profile</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="../static/css/signup.css" rel="stylesheet" type="text/css" >
 </head>
@@ -11,35 +11,34 @@
 <div class="container col-md-8 col-md-offset-2">
 
     <div class="row">
-        <div class="col-md-10"><h2>EDIT PROFILE</h2></div>
+        <div class="col-md-10"><h2>PROFILE</h2></div>
     </div>
 
     <div class="row">
         <div class="col-md-4">
             <div class="text-center">
                 <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
-                <input type="file" class="text-center center-block file-upload">
             </div>
         </div>
 
         <div class="col-md-8">
             <label for="first_name">First name</label>
-            <input class="form-control" type="text" placeholder="FIRST NAME">
+            <input class="form-control" type="text" value="Jón" disabled>
         </div>
 
         <div class="col-md-8">
             <label for="last_name">Last name</label>
-            <input class="form-control" type="text" placeholder="LAST NAME">
+            <input class="form-control" type="text" value="Jónsson" disabled>
         </div>
 
         <div class="col-md-8">
             <label>Email address</label>
-            <input type="text" class="form-control" placeholder="EMAIL ADDRESS">
+            <input type="text" class="form-control" value="jonjonsson@gmail.com" disabled>
         </div>
 
         <div class="col-md-8">
             <label>Phone Number</label>
-            <input class="form-control" type="text" placeholder="PHONE NUMBER">
+            <input class="form-control" type="text" value="+354-581-2345" disabled>
         </div>
     </div>
 
@@ -47,28 +46,18 @@
 
         <div class="col-md-12">
             <label>Username</label>
-            <input  class="form-control" type="text" placeholder="USERNAME">
-        </div>
-
-        <div class="col-md-6">
-            <label>Password</label>
-            <input  class="form-control" type="password" placeholder="PASSWORD">
-        </div>
-
-        <div class="col-md-6">
-            <label>Verify Password</label>
-            <input  class="form-control" type="password" placeholder="VERIFY PASSWORD">
+            <input  class="form-control" type="text" value="jonni123" disabled>
         </div>
 
         <div class="col-md-6">
             <label>Date of Birth</label>
-            <input class="form-control" type="date" value="">
+            <input  class="form-control" type="date" value="" disabled>
+
         </div>
 
         <div class="col-md-12">
         <br>
-            <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
-            <button class="btn btn-lg">Cancel</button>
+            <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon"></i>Edit profile</button>
         </div>
 
     </div>
