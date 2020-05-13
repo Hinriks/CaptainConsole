@@ -61,11 +61,15 @@ def delete_cartitem(request, id):
     return redirect(view_cart)
 
 def view_cart(request):
-    username_from_request = request.user.username
-    user = User.objects.get(username=username_from_request)
-    cartitems = user.cart.cart_item.all()
-    context = {'cartitems': cartitems}
-    calc_total(user.cart)
+    try:
+        username_from_request = request.user.username
+        user = User.objects.get(username=username_from_request)
+        cartitems = user.cart.cart_item.all()
+        context = {'cartitems': cartitems}
+        calc_total(user.cart)
+    except:
+        context = {'cartitems': 'None'}
+
     return render(request, 'cart/index.html', context)
 
 
