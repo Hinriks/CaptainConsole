@@ -2,7 +2,7 @@ from django.http import JsonResponse, request
 from django.shortcuts import render, redirect, get_object_or_404
 from product.models import Product
 from user.models import User
-from cart.models import CartItem
+from cart.models import CartItem, Cart
 
 # Create your views here.
 
@@ -27,10 +27,10 @@ def add_to_cart(request, id):
         for cartitem in cartitems:
             if cartitem.product.id == product_id:
                 cartitem.quantity += 1 #TODO her tharf ad breita hvad morg
+                cartitem.line_total = cartitem.product.price * cartitem.quantity
                 cartitem.save()
                 added = True
-                for cartitem in cartitems:
-                    user.cart.total += cartitem.quantity * cartitem.product.price
+                calc_total(user.cart)
 
 
         if not added:
@@ -41,16 +41,16 @@ def add_to_cart(request, id):
             cart_item.quantity = 1 #TODO her tharf ad breita hvad morg
             cart_item.line_total = cart_item.product.price * cart_item.quantity
             cart_item.save()
-            for cartitem in cartitems:
-                user.cart.total = cartitem.quantity * cartitem.product.price
+            calc_total(user.cart)
         
             
     return redirect(view_cart)
 
 def calc_total(cart):
     cartitems = cart.cart_item.all()
+    cart.total = 0
     for cartitem in cartitems:
-        cart.total = cartitem.quantity * cartitem.product.price
+        cart.total += cartitem.line_total
     cart.save()
     
 
