@@ -1,11 +1,9 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/account.css' %}">
 <body>
-    <a id="accountcontainer" href="#">
-        <div id="accountdiv">
-            <img class="accounticon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">
-            <p id="logintext">Log in</p>   
-            <p id="signuptext">Sign up</p>                 
-        </div>
-    </a>
+    <div id="accountdiv">
+        <img class="accounticon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">
+        <a id="logintext">Log in</a>
+        <a id="signuptext">Sign up</a>                 
+    </div>
 </body>
