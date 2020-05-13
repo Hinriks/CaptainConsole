@@ -30,7 +30,7 @@ def add_to_cart(request, id):
                 cartitem.save()
                 added = True
                 for cartitem in cartitems:
-                    cart.total += cartitem.quantity * cartitem.product.price
+                    user.cart.total += cartitem.quantity * cartitem.product.price
 
 
         if not added:
@@ -42,7 +42,7 @@ def add_to_cart(request, id):
             cart_item.line_total = cart_item.product.price * cart_item.quantity
             cart_item.save()
             for cartitem in cartitems:
-                cart.total = cartitem.quantity * cartitem.product.price
+                user.cart.total = cartitem.quantity * cartitem.product.price
         
             
     return redirect(view_cart)
