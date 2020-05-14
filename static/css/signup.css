@@ -10,3 +10,9 @@
 .general {
     padding: 10px;
 }
+
+.finish_button {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
