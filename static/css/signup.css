@@ -16,3 +16,7 @@
     text-align: center;
     padding: 10px;
 }
+
+::placeholder {
+    opacity: 0.5 !important;
+}
