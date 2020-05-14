@@ -5,13 +5,6 @@
     width: 200px;
     height: 100px;
     border-radius: 10px;
-}
-
-#accountcontainer {
-    background-color:#6c757d;
-    border-radius: 10px;
-    width: 200px;
-    height: 100px;
     margin-right: 10px;
 }
 
@@ -25,24 +18,23 @@
 
 .accountimage {
     position: absolute;
-    margin-left: -60px;
+    margin-left: -50px;
     margin-top: 20px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    
 }
 
 #accountname {
     font-size: xx-large;
     color: #000000;
+    margin-top: 0px;
     margin-bottom: 0px;
-    padding-top: 7px;
-    padding-left:70px
+    padding-top: 10px;
 }
   
 #logout {
     font-size: medium;
     color: #000000;
-    padding-left:70px
+    padding-top: 0px;
 }

@@ -1,12 +1,10 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/accountloggedin.css' %}">
 <body>
-    <a id="accountcontainer" href="#">
-        <div id="accountdiv">
-            <img class="accounticon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">
-            <img class="accountimage" src="{% static 'img/castlevania.jpg' %}" alt="Profile">
-            <p id="accountname">{{ user.username }}</p>
-            <p id="logout">Log out</p>                 
-        </div>
-    </a>
+    <div id="accountdiv">
+        <img class="accounticon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">
+        <img class="accountimage" src="{% static 'img/castlevania.jpg' %}" alt="Profile">
+        <a id="accountname" href="#">{{ user.username }}</a><br>
+        <a id="logout" href="#">Log out</a>                
+    </div>
 </body>
