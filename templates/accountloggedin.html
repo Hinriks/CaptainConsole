@@ -3,7 +3,7 @@
 <body>
     <div id="accountdiv">
         <img class="accounticon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">
-        <img class="accountimage" src="{% static 'img/castlevania.jpg' %}" alt="Profile">
+        <img class="accountimage" src="{{ user.avatar_img }}" alt="Profile">
         <a id="accountname" href="{% url 'profile'%}">{{ user.username }}</a><br>
         <a id="logout" href="{% url 'logout' %}">Log out</a>                
     </div>
