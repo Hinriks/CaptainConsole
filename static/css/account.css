@@ -37,3 +37,41 @@
     padding-left: 20px;
     margin-top: 0px;
 }
+
+@media screen and (min-width: 992px) {
+    #smallaccountdiv {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #accountdiv {
+        display: none;
+    }
+
+    #smallaccountdiv {
+        height: 100px;
+        width: 100px;
+        background-color:#6c757d;
+        border-radius: 10px;
+    }
+
+    .accounticon {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        float: none;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+    
+    .img-with-text {
+        margin:  5px auto;
+        text-align: center;
+        width: 50px;
+    }
+
+    .accountimage {
+        position: absolute;
+    }
+}

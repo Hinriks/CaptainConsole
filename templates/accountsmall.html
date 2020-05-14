@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="{% static 'css/accountsmall.css' %}">
 <body>
-    <div id="accountdiv">
+    <div id="smallaccountdiv">
         <img class="accounticon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">                
         <figcaption class="caption">
             {% if request.user.is_authenticated %}
             <h4>Log out</h4>
             {% else %}
-            <h4>User1</h4>
+            <h4>{{ user.username }}</h4>
         </figcaption>
     </div>
 </body>
