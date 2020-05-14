@@ -1,52 +1,49 @@
 {% extends 'base.html' %}
 {% load static %}
-<link href="{% static 'css/signup.css' %}" rel="stylesheet" type="text/css" >
 {% block content %}
-<body>
-    <div class="col-md-10 offset-md-1">
+<link href="{% static 'css/signup.css' %}" rel="stylesheet" type="text/css" >
+<link href="{% static 'css/profile.css' %}" rel="stylesheet" type="text/css" >
 
-        <div class="row">
-            <div><h2>PROFILE</h2></div>
+<div class="container profile">
+
+    <div class="row">
+        <div class="title"><h2>PROFILE</h2></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="text-center">
+                <img src="{{ user.avatar_img }}" class="avatar img-circle img-thumbnail" alt="avatar">
+            </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-4">
-                <div class="text-center">
-                    <img src="{{ user.avatar_img }}" class="avatar img-circle img-thumbnail" alt="avatar">
-                </div>
-            </div>
+        <div class="col-md-4">
+            <label for="first_name">First name</label>
+            <input class="form-control" type="text" value="{{ user.first_name }}" disabled>
 
-            <div class="col-md-4">
-                <label for="first_name">First name</label>
-                <input class="form-control" type="text" value="{{ user.first_name }}" disabled>
+            <label>Email address</label>
+            <input type="text" class="form-control" value="{{ user.email }}" disabled>
 
-                <label>Email address</label>
-                <input type="text" class="form-control" value="{{ user.email }}" disabled>
-
-                <label>Username</label>
-                <input  class="form-control" type="text" value="{{ user.username }}" disabled>
-            </div>
-            <div class="col-md-4">
-                <label for="last_name">Last name</label>
-                <input class="form-control" type="text" value="{{ user.last_name }}" disabled>
-
-
-                <label>Phone Number</label>
-                <input class="form-control" type="text" value="{{ user.phone_number }}" disabled>
-
-                <label>Date of Birth</label>
-<!--                {{ user.date_of_birth }}-->
-                <input  class="form-control" type="text" value="{{ user.date_of_birth }}" disabled>
-            </div>
-
+            <label>Username</label>
+            <input  class="form-control" type="text" value="{{ user.username }}" disabled>
         </div>
+        <div class="col-md-4">
+            <label for="last_name">Last name</label>
+            <input class="form-control" type="text" value="{{ user.last_name }}" disabled>
 
-        <div class="row">
-            <div class="col-md-2 offset-md-5">
-                <a href="profile/edit"><button class="btn btn-lg btn-success" type="submit"><i class="glyphicon"></i>Edit profile</button></a>
-            </div>
+            <label>Phone Number</label>
+            <input class="form-control" type="text" value="{{ user.phone_number }}" disabled>
+
         </div>
 
     </div>
-</body>
+
+    <div class="row">
+        <div class="buttons">
+            <a href="profile/edit"><button class="btn btn-lg btn-success" type="submit"><i class="glyphicon"></i>Edit profile</button></a>
+        </div>
+    </div>
+
+</div>
+
 {% endblock %}
