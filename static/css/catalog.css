@@ -10,3 +10,7 @@
     flex-wrap: wrap;
     margin: auto;
 }
+
+.sortBy, .category {
+    margin-left: 20px;
+}
