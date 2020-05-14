@@ -19,9 +19,9 @@
 </div>
 <div id="account-open" class="account-open-div">
     <img class="account-open-icon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">
-    <form method="post">
+    <form action="user/login/" method="post">
       {% csrf_token %}
-      {{ form.as_p }}
+      {{ loginform }}
       <button type="submit">Login</button>
     </form>
 </div>
