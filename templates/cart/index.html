@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
     <link href="{% static 'css/shopping_cart.css' %}" rel="stylesheet" type="text/css" >
-    <body>
+    {% include 'menu.html' %}
         <h1 class="titleText">CART</h1>
         <hr>
         {% if request.user.is_authenticated %}
@@ -56,5 +56,4 @@
          {% else %}
               <h1> user is not logged in</h1>
           {% endif %}
-    </body>
 {% endblock %}

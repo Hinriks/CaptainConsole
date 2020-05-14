@@ -1,5 +1,5 @@
 
-.container {
+.catalog-wrap {
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -9,4 +9,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
+}
+.titleText {
+    margin-top: 20px;
 }
