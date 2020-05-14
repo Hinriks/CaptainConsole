@@ -1,10 +1,8 @@
 .itemicon {
     width: 300px;
     max-height: 400px;
-    margin-top: 6%;
-    margin-left: 4%;
+    margin: 2% 2% 2% 2%;
     float: left;
-
 }
 
 #desctext {
