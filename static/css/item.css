@@ -1,27 +1,25 @@
 .itemicon {
     width: 250px;
     height: 400px;
-    padding-top: 6%;
-    padding-left: 4%;
+    padding: 20px 20px 20px 20px;
     float: left;
 }
 
 #desctext {
-    margin:2.5em 0;/* FF for instance */
-    padding-left: 455px;
+    font-size: medium;
     width: 100%;
 }
-
 
 .button {
     padding: 25px;
     font-size: x-large;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
     width: 150px;
-    margin: auto;
     float: left;
+    margin-right: 10px;
+    justify-content: left;
 }
 
 #price {
@@ -35,6 +33,8 @@
     height: 75px;
     font-size: medium;
     margin-top: 0.5%;
+    text-decoration: none;
+    color: white;
 }
 #cartdiv {
     margin: 0px auto;
