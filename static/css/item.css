@@ -5,6 +5,10 @@
     float: left;
 }
 
+#itemtitle {
+    padding-top: 2%;
+}
+
 #desctext {
     font-size: medium;
     width: 100%;
