@@ -5,13 +5,14 @@
 <link rel="stylesheet" href="{% static 'css/item.css' %}">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <body>
-    <div >
+    <div>
         <img class="itemicon" src="{{ product.productimage_set.first.image }}" alt="Profile">
         <h1 id="itemtitle">{{product.name}}</h1>
+        <p id="desctext">{{product.description}}</p>
         <div>
-        <h3 id="desctext">{{product.description}}</h3>
-        <p class="button" id="price">{{product.price}}.-kr</p>
-        <p class="button" id="addtocart"><a href="{% url 'add_to_cart' product.id %}">Add to Cart</a></p>
+            <p class="button" id="price">{{product.price}}.-kr</p>
+<!--            <p class="button" id="addtocart"><a href="{% url 'add_to_cart' product.id %}">Add to Cart</a></p>-->
+            <a href="{% url 'add_to_cart' product.id %}" class="button" id="addtocart">Add to Cart</a>
         </div>
     </div>
     {% if user.is_staff == True %}
