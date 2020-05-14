@@ -6,25 +6,29 @@
     padding: 10px 20px 10px 20px;
 }
 
-.popular {
+.featured {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 20px;
 }
 
 .price {
     background-color: #579DB8;
-    margin: 10px 10px 10px 3px;
+    margin: 10px 30px 10px 3px;
     padding: 10px 0px 10px 3px;
-    text-align: center;
     border: black;
-}
-
-.game_name {
     text-align: center;
 }
 
-.image_games {
+.console_name {
+    text-align: center;
+}
+
+.image_consoles {
     width: 250px;
     height: 250px;
 }
 
+.item {
+    color: black;
+}
