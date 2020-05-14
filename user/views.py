@@ -12,3 +12,7 @@ def edit_profile(request):
     user = request.user
     context= {'user': user}
     return render(request, 'edit_profile.html', context)
+
+def signup(request):
+
+    return render(request, 'signup_general.html')

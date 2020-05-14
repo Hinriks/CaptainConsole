@@ -5,7 +5,7 @@
 <div id="account-closed" class="account-closed-div">
     <img class="account-closed-icon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">
     <a href="#" id="account-closed-login" class="login-text">Log in</a>
-    <a href="#" class="signup-text">Sign up</a>
+    <a href="{% url 'user:signup' %}" class="signup-text">Sign up</a>
 {#    {% url 'login' %} #}
 </div>
 <div class="img-with-text small-account-div">
@@ -19,9 +19,9 @@
 </div>
 <div id="account-open" class="account-open-div">
     <img class="account-open-icon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">
-    <form method="post">
+    <form action="user/login/" method="post">
       {% csrf_token %}
-      {{ form.as_p }}
+      {{ loginform }}
       <button type="submit">Login</button>
     </form>
 </div>

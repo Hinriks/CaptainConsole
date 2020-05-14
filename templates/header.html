@@ -28,13 +28,13 @@
           {% if request.user.is_authenticated %}
               {% include 'accountloggedin.html' with user=user %}
           {% else %}
-              {% include 'account.html'%}
+              {% include 'account.html' with loginform=loginform %}
           {% endif %}
       </li>
       <li class="nav-item">
         <a href ="{% url 'cart-index' %}" class="nav-link waves-effect" id="cartcontainer">
           <div class="img-with-text" id="cartimg">
-            <h5 id="cartnumber">0</h5>
+            <h6 id="cartnumber">0</h6>
             <img id="carticon" src="{% static 'img/cart.png' %}" alt="Cart">
             
             <p id="cart">Cart</p>
