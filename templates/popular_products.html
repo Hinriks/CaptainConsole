@@ -1,11 +1,11 @@
 {% load static %}
-    <link href="{% static 'css/nes_games.css' %}" rel="stylesheet" type="text/css" >
+    <link href="{% static 'css/popular_products.css' %}" rel="stylesheet" type="text/css" >
 
     <h3 id="title">Popular products</h3>
     <div class="popular">
         {% for product in popular_products %}
             <a class="item" href="/product/{{ product.id }}">
-                <div>
+                <div class="productDiv">
                     <img class="image_games" src="{{ product.productimage_set.first.image }}" alt="{{ product.name }}">
                     <h4 class="game_name">{{ product.name }}</h4>
                     <h5 class="price">{{ product.price }}kr</h5>
