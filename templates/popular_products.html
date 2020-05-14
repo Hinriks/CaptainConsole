@@ -6,8 +6,8 @@
         {% for product in popular_products %}
             <a class="item" href="/product/{{ product.id }}">
                 <div class="productDiv">
-                    <img class="image_games" src="{{ product.productimage_set.first.image }}" alt="{{ product.name }}">
-                    <h4 class="game_name">{{ product.name }}</h4>
+                    <img class="image_product" src="{{ product.productimage_set.first.image }}" alt="{{ product.name }}">
+                    <h4 class="product_name">{{ product.name }}</h4>
                     <h5 class="price">{{ product.price }}kr</h5>
                 </div>
             </a>
