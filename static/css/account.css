@@ -1,4 +1,12 @@
-#accountdiv {
+.account-open-div {
+    justify-content: left;
+    height: 75px;
+    background-color:#6c757d;
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+}
+.account-closed-div {
     justify-content: left;
     height: 75px;
     background-color:#6c757d;
@@ -8,7 +16,7 @@
     margin-right: 10px;
 }
 
-#accountcontainer {
+.account-container {
     background-color:#6c757d;
     border-radius: 10px;
     width: 200px;
@@ -16,14 +24,21 @@
     margin-right: 10px;
 }
 
-.accounticon {
+.account-closed-icon {
     width: 60px;
     padding-top: 20px;
     padding-left: 10px;
     float: left;
 }
+.account-open-icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10px;
+    float: left;
+}
 
-#logintext {
+.login-text {
     font-size: xx-large;
     color: #000000;
     margin-bottom: 20px;
@@ -31,32 +46,72 @@
     padding-left: 5px;
 }
   
-#signuptext {
+.signup-text {
     font-size: medium;
     color: #000000;
     padding-left: 20px;
     margin-top: 0px;
 }
 
+.username {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.password {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.signup {
+    background-color: #49535F;
+    color: #000000;
+    margin-top: 10px;
+    margin-left: 30px;
+    float: left;
+}
+
+.login {
+    background-color: #29323D;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-right: 30px;
+    float: right;
+}
+
+#account-open {
+    display:none;
+}
+
 @media screen and (min-width: 992px) {
-    #smallaccountdiv {
+    .small-account-div {
         display: none;
+    }
+    .account-image {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        float: none;
+        margin-top: 20px;
+        margin-left: -50px;
+        border-radius: 50%;
     }
 }
 
 @media screen and (max-width: 992px) {
-    #accountdiv {
+    .account-closed-div {
         display: none;
     }
 
-    #smallaccountdiv {
+    .small-account-div {
         height: 100px;
         width: 100px;
         background-color:#6c757d;
         border-radius: 10px;
     }
 
-    .accounticon {
+    .account-closed-icon {
         width: 50px;
         height: 50px;
         text-align: center;
@@ -72,7 +127,7 @@
         width: 50px;
     }
 
-    .accountimage {
+    .account-image {
         position: absolute;
         width: 50px;
         height: 50px;
