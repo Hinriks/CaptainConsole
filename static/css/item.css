@@ -19,13 +19,12 @@
     width: 150px;
     float: left;
     margin-right: 10px;
-    justify-content: left;
 }
 
 #price {
     background-color: #599DB6;
     margin-right: 1%;
-    margin-left: 50%;
+    margin-left: 1%;
 }
 
 #addtocart {
@@ -36,6 +35,11 @@
     text-decoration: none;
     color: white;
 }
+
+#addtocart:hover {
+    background-color: #5e7681;
+}
+
 #cartdiv {
     margin: 0px auto;
 }
