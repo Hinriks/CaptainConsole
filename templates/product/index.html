@@ -19,7 +19,7 @@
 
     <link href="{% static 'css/catalog.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/shopping_cart.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/consoles.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/popular_products.css' %}" rel="stylesheet" type="text/css">
     <body>
 
         <h1 class="titleText">Catalog</h1>
@@ -64,26 +64,26 @@
             <div class="products">
                 {% for product in products %}
                     <div>
-                        <a href="/product/{{ product.id }}">
-                            <img class="image_consoles" src="{{ product.productimage_set.first.image }}" alt="atari console">
-                            <h4 class="console_name">{{ product.name }}</h4>
+                        <a class="item" href="/product/{{ product.id }}">
+                            <img class="image_product" src="{{ product.productimage_set.first.image }}" alt="atari console">
+                            <h4 class="product_name">{{ product.name }}</h4>
+                            <h5 class="price">{{ product.price }}kr</h5>
                         </a>
-                        <h5 class="price">{{ product.price }}</h5>
                     </div>
 
                     {% comment %}
                     <div>
-                        <a href=""><img class="image_consoles" src="../static/img/ps2_console.png" alt="ps2 console"><h4 class="console_name">PlayStation 2</h4></a>
+                        <a href=""><img class="image_product" src="../static/img/ps2_console.png" alt="ps2 console"><h4 class="console_name">PlayStation 2</h4></a>
                         <h5 class="price">7.000 kr</h5>
                     </div>
 
                     <div>
-                        <a href=""><img class="image_consoles" src="../static/img/sega_console.png" alt="sega console"><h4 class="console_name">SEGA Mega Drive</h4></a>
+                        <a href=""><img class="image_product" src="../static/img/sega_console.png" alt="sega console"><h4 class="console_name">SEGA Mega Drive</h4></a>
                         <h5 class="price">3.000 kr</h5>
                     </div>
 
                     <div>
-                        <a href=""><img class="image_consoles" src="../static/img/nes_console.png" alt="nes console"><h4 class="console_name">Nintendo NES console</h4></a>
+                        <a href=""><img class="image_product" src="../static/img/nes_console.png" alt="nes console"><h4 class="console_name">Nintendo NES console</h4></a>
                         <h5 class="price">5.000 kr</h5>
                     </div>
                     {% endcomment %}

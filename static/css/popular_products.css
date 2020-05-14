@@ -24,6 +24,7 @@
     text-align: center;
     border: black;
     width: 250px;
+    color: black;
 }
 
 .price:hover {
@@ -32,6 +33,7 @@
 
 .product_name {
     text-align: center;
+    color: black;
     padding: 10px 0;
     max-width: 250px;
     height: 60px;
