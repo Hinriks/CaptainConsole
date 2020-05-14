@@ -14,8 +14,11 @@
         <p class="button" id="addtocart"><a href="{% url 'add_to_cart' product.id %}">Add to Cart</a></p>
         </div>
     </div>
-    <a href="{% url 'delete_product' product.id %}" class="block btn btn-primary">Delete Product</a>
-    <a href="{% url 'update_product' product.id %}" class="block btn btn-primary">Update Product</a>
-    <a href="{% url 'add_to_cart' product.id %}" class="block btn btn-primary">Add to cart</a>
+    {% if user.is_staff == True %}
+
+        <a href="{% url 'delete_product' product.id %}" class="block btn btn-primary">Delete Product</a>
+        <a href="{% url 'update_product' product.id %}" class="block btn btn-primary">Update Product</a>
+    
+    {% endif %}
 </body>
 {% endblock content %}

@@ -52,39 +52,45 @@ def get_product_by_id(request, id):
 
 
 def create_product(request):
-    if request.method == 'POST':
-        form = ProductCreateForm(data=request.POST)
-        if form.is_valid():
-            product = form.save()
-            product_image = ProductImage(image=request.POST['image'], product=product)
-            product_image.save()
-            return redirect('product-index')
-    else:
-        form = ProductCreateForm()
-    return render(request, 'product/create_product.html', {
-        'form': form
-    })
+    user = get_user(request)
+    if user.is_staff:
+        if request.method == 'POST':
+            form = ProductCreateForm(data=request.POST)
+            if form.is_valid():
+                product = form.save()
+                product_image = ProductImage(image=request.POST['image'], product=product)
+                product_image.save()
+                return redirect('product-index')
+        else:
+            form = ProductCreateForm()
+        return render(request, 'product/create_product.html', {
+            'form': form
+        })
 
 
 def delete_product(request, id):
-    product = get_object_or_404(Product, pk=id)
-    product.delete()
-    return redirect('product-index')
+    user = get_user(request)
+    if user.is_staff:
+        product = get_object_or_404(Product, pk=id)
+        product.delete()
+        return redirect('product-index')
 
 
 def update_product(request, id):
-    instance = get_object_or_404(Product, pk=id)
-    if request.method == 'POST':
-        form = ProductUpdateForm(data=request.POST, instance=instance)
-        if form.is_valid():
-            form.save()
-            return redirect('product-details', id=id)
-    else:
-        form = ProductUpdateForm(instance=instance)
-    return render(request, 'product/update_product.html', {
-        'form': form,
-        'id': id
-    })
+    user = get_user(request)
+    if user.is_staff:        
+        instance = get_object_or_404(Product, pk=id)
+        if request.method == 'POST':
+            form = ProductUpdateForm(data=request.POST, instance=instance)
+            if form.is_valid():
+                form.save()
+                return redirect('product-details', id=id)
+        else:
+            form = ProductUpdateForm(instance=instance)
+        return render(request, 'product/update_product.html', {
+            'form': form,
+            'id': id
+        })
 
 
 def get_user(request):
