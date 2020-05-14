@@ -37,6 +37,7 @@ li profile {
   background-position-x: center;
   background-position-y: center;
   margin-left: 5px;
+  border-color: #ced4da;
 }
 .namesearch {
   font-family: 'Press Start 2P', cursive;
@@ -68,7 +69,7 @@ li profile {
 
 #cartnumber {
   position: absolute;
-  margin: 0px;
+  margin-top: 3px;
   padding: 10px 24px 7px;
 }
 

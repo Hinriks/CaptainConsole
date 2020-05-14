@@ -34,7 +34,14 @@
       <li class="nav-item">
         <a href ="{% url 'cart-index' %}" class="nav-link waves-effect" id="cartcontainer">
           <div class="img-with-text" id="cartimg">
-            <h6 id="cartnumber">0</h6>
+            <h6 id="cartnumber">
+            {% if request.user.is_authenticated %}
+              {{user.cart.cart_item.all | length}}
+              {% endif %}
+            
+            
+            
+            </h6>
             <img id="carticon" src="{% static 'img/cart.png' %}" alt="Cart">
             
             <p id="cart">Cart</p>
