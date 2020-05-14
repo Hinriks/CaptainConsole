@@ -119,6 +119,9 @@ li profile {
     margin-left: -200px;
   }
 
+  #cartcontainer {
+    margin-left: 0px;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -134,4 +137,7 @@ li profile {
     margin-left: 0px;
   }
 
+  #cartcontainer {
+    margin-left: 0px;
+  }
 }
