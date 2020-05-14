@@ -28,7 +28,7 @@
           {% if request.user.is_authenticated %}
               {% include 'accountloggedin.html' with user=user %}
           {% else %}
-              {% include 'account.html'%}
+              {% include 'account.html' with loginform=loginform %}
           {% endif %}
       </li>
       <li class="nav-item">

@@ -2,16 +2,19 @@ from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from product.forms.product_form import ProductCreateForm, ProductUpdateForm
 from product.models import Product, ProductImage,Promo
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import login
 import random
 
 
 # Create your views here.
 def homepage(request):
+    loginform = AuthenticationForm()
     random_products = get_popular_products()
     featured_products = get_featured_products()
     user = get_user(request)
     promos = get_promos()
-    context = {'popular_products': random_products, 'featured_products': featured_products, 'promos': promos, 'user': user}
+    context = {'popular_products': random_products, 'featured_products': featured_products, 'promos': promos, 'user': user, 'loginform':loginform}
     return render(request, 'home/index.html', context)
 
 
