@@ -45,4 +45,5 @@
 .checkout {
     position:relative;
     left: 50%;
+    margin-bottom: 10px;
 }

@@ -3,9 +3,9 @@
 <body>
     <div id="accountdiv">
         <img class="accounticon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">
-        <img class="accountimage" src="{% static 'img/castlevania.jpg' %}" alt="Profile">
+        <img class="accountimage" src="{{ user.avatar_img }}" alt="Profile">
         <a id="accountname" href="{% url 'user:profile'%}">{{ user.username }}</a><br>
-        <a id="logout" href="{% url 'user:logout' %}">Log out</a>                
+        <a id="logout" href="{% url 'user:logout' %}">Log out</a>
     </div>
     <div class="img-with-text" id="smallaccountdiv">
         <img class="accounticon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">
