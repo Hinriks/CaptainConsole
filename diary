@@ -67,9 +67,9 @@
        working on the frontend.
 
    Tekla: Did the html and css for the footer and signup general
-   Hinni: ....
+   Hinni: Spent a lot of time working on the functionality of the shopping cart.
    Patrekur: Did the html and css for the promo, consoles and nes games feature
-   Pálmi: ....
+   Pálmi: Spent a lot of time working on the functionality of the shopping cart.
    Snorri: Did the html and css for the header and different login icons in the header, as well as the concoles menu bar
 
    Meeting from 10-16
@@ -77,9 +77,9 @@
 07.05: Continue with the structure of backend and frontend.
 
     Tekla: Did the html and css for the signup billing
-    Hinni: ....
+    Hinni: Spent a lot of time working on the functionality of the shopping cart.
     Patrekur: Finished consoles and nes games and did the html and css for the cart and checkout
-    Pálmi: ....
+    Pálmi: Spent a lot of time working on the functionality of the shopping cart.
     Snorri: Finished the login icons for the header and started working on the html & css for a single item / product
 
     Worked seperately
@@ -87,9 +87,9 @@
 08.05: Goal to finish the html and css before the weekend but plan b is to be done on monday.
 
     Tekla: Did the html & css for edit profile and profile itself
-    Hinni: ....
+    Hinni: Worked on the shopping cart functionality
     Patrekur: Did the html & css for order summary.
-    Pálmi: ...
+    Pálmi: Worked on the shopping cart functionality
     Snorri: Finished the html & css for a single product
 
     Short meeting from 15-18
@@ -100,9 +100,9 @@
 11.05: Finalized html & css as well as cleaning it up and bug fixes.
 
     Tekla: Bug fixed and cleaned up the html & css
-    Hinni: Worked on the shopping cart functionality
+    Hinni:...?
     Patrekur: Did the html & css for all products.
-    Pálmi: Worked on the shopping cart functionality
+    Pálmi: Worked on the functionality for login.
     Snorri: Started connecting all buttons to destination as well as the website as a whole
 
     Meeting from 11-19
@@ -130,6 +130,8 @@
            Connected the login.
     Snorri: Fixed the size of the pictures on the product site. Added an 'enter' button beside the Search input field.
 
+    Meeting and work hours from morning until midnight
+
 14.05:
 
     Tekla: Worked on the video presentation
@@ -137,11 +139,13 @@
            products aligned on the front page which change.
            Worked on the functionality of profile and edit profile.
     Patrekur: Added products to the database and fixed minor padding & design issues. Tried to find errors on the site.
-              Removed the underline on the text of hovered items.
+              Removed the underline on the text of hovered items. Fixed the description of the products.
     Pálmi: Created the subcategory. Fixed the fact that the cart functionality didn't work when the user was not logged in.
            Worked on sign up functionality.
     Snorri: Added an counter on the cart icon. Fixed the bug that the search bar went 'out of bounds' when the site was
             smaller. Made the dropdown on the menu bar look much better. Fixed the format of the login feature.
+
+    Meeting and work hours from morning until midnight.
 
 15.05:
 
