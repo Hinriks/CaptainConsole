@@ -36,6 +36,7 @@ li profile {
   background-position-x: center;
   background-position-y: center;
   margin-left: 5px;
+  border-color: #ced4da;
 }
 .namesearch {
   font-family: 'Press Start 2P', cursive;
