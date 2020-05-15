@@ -51,3 +51,7 @@
 .product:hover {
     box-shadow: none;
 }
+
+.pagefiller {
+    margin-bottom: 500px;
+}
