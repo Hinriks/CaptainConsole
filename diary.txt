@@ -1,3 +1,5 @@
+
+
 27.04: We had a good look at the project description and then we set up a plan on the requirement analysis report
 
     Tekla: Set up the chapters and framework of the report, worked on the requirement list and set up all the use cases
@@ -134,20 +136,26 @@
 
 14.05: Keep working on the remaining tasks
 
-    Tekla: Worked on the video presentation
+    Tekla: Worked on and planned the video presentation, redesigned the checkout according to the rubric as well as coding it
     Hinni: Connected the random flow of the console and the popular products categories so there will always be 4 random
            products aligned on the front page which change.
            Worked on the functionality of profile and edit profile.
     Patrekur: Added products to the database and fixed minor padding & design issues. Tried to find errors on the site.
               Removed the underline on the text of hovered items. Fixed the description of the products.
     Pálmi: Created the subcategory. Fixed the fact that the cart functionality didn't work when the user was not logged in.
-           Worked on sign up functionality.
+           Worked on sign up functionality. Worked on the search functionality.
     Snorri: Added an counter on the cart icon. Fixed the bug that the search bar went 'out of bounds' when the site was
             smaller. Made the dropdown on the menu bar look much better. Fixed the format of the login feature.
 
-    Meeting and work hours from morning until midnight.
+    Meeting and work hours from morning until late night.
 
-15.05:
+15.05: DUE DATE
+
+    Tekla: Finalized the checkout model and added more pictures to each product.
+    Hinni: Finalized the edit profile functionality, Did the functionality for order and checkout.
+    Patrekur: Tried to fix the fact that the dropdown on the menu wasn't working everywhere.
+    Pálmi: Finalized the search functionality. Did the functionality for order and checkout.
+    Snorri: Lots of bug fixed, worked on the functionality of more pictures with a product, fixed the sizing of things.
 
 
 
