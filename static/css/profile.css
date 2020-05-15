@@ -44,3 +44,6 @@
 .pagefiller {
     margin-bottom: 70px;
 }
+#hidden-avatar {
+    display:none;
+}

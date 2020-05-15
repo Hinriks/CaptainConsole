@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm, widgets
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth import get_user_model
 User = get_user_model()
 
@@ -14,15 +14,7 @@ class SignUpForm(UserCreationForm):
         model = User
         fields = ('username', 'first_name', 'last_name','email', 'password1', 'password2',)
 
-class UserUpdateForm(ModelForm):
+class UserUpdateForm(UserChangeForm):
     class Meta:
         model = User
-        exclude = [ 'id', 'password', 'date_joined' ]
-        widgets = {
-            'first_name': widgets.TextInput(attrs={ 'class': 'form-control' }),
-            'last_name': widgets.TextInput(attrs={ 'class': 'form-control' }),
-            'email': widgets.TextInput(attrs={ 'class': 'form-control' }),
-            'phone_number': widgets.TextInput(attrs={ 'class': 'form-control' }),
-            'username': widgets.TextInput(attrs={ 'class': 'form-control' }),
-            'avatar_img': widgets.TextInput(attrs={ 'class': 'form-control' }),
-        }
+        fields = ('first_name', 'last_name', 'email', 'phone_number', 'username', 'avatar_img',)
