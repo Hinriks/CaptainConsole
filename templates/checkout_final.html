@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="../static/css/order_summary.css" rel="stylesheet" type="text/css" >
+    <link href="../static/css/shopping_cart.css" rel="stylesheet" type="text/css" >
+    <link href="../static/css/checkout_final.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<div class="container bottom-space col-md-4 col-md-offset-4" >
+    <div class="row">
+        <div class="btn-group btn-group-justified menuBar" role="group" aria-label="Basic example">
+            <a id="general" href="#" class="btn btn-primary">General</a>
+            <a id="billing" href="#" class="btn btn-primary">Billing</a>
+            <a id="order" href="#" class="btn btn-primary">Order</a>
+            <a id="summary" href="#" class="btn btn-primary">Summary</a>
+        </div>
+    </div>
+</div>
+
+<div class="container bottom-space col-md-4 col-md-offset-4" id="checkout_general" >
+    <div class="row">
+
+        <h4 class="col-md-8 top-space">GENERAL INFORMATION</h4>
+
+        <div class="col-md-12 top-space">
+            <label>Full name</label>
+            <input class="form-control" type="text" placeholder="FULL NAME">
+        </div>
+
+        <div class="col-md-12">
+            <label>Email address</label>
+            <input class="form-control" type="text" placeholder="EMAIL ADDRESS">
+        </div>
+
+        <div class="col-md-12">
+            <label>Phone Number</label>
+            <input class="form-control" type="text" placeholder="PHONE NUMBER">
+        </div>
+
+
+        <h4 class="col-md-8 top-space">SHIPPING ADDRESS</h4>
+        <div class="col-md-12">
+            <label>Address</label>
+            <input class="form-control" type="text" placeholder="ADDRESS">
+        </div>
+        <div class="col-md-12">
+            <label>Apt/Suite</label>
+            <input class="form-control" type="text" placeholder="APT/SUITE">
+        </div>
+        <div class="col-md-8">
+            <label>City/Town</label>
+            <input class="form-control" type="text" placeholder="CITY/TOWN">
+        </div>
+        <div class="col-md-4">
+            <label>Zip</label>
+            <input class="form-control" type="text" placeholder="ZIP">
+        </div>
+
+        <div class="col-md-8 bottom-space">
+            <label>Country</label><br>
+            <select name="country">
+                <option value="jan">ICELAND</option>
+                <option value="feb">ENGLAND</option>
+                <option value="jan">SWEDEN</option>
+                <option value="feb">DENMARK</option>
+                <option value="jan">NORWAY</option>
+                <option value="feb">RUSSIA</option>
+                <option value="jan">FRANCE</option>
+                <option value="feb">UNITED STATES</option>
+            </select>
+        </div>
+        <a href="#" class="btn btn-primary col-md-6 col-md-offset-3 nextButton" id="toBilling">NEXT</a>
+
+    </div>
+</div>
+
+<div class="container bottom-space col-md-4 col-md-offset-4" id="checkout_billing">
+    <div class="row">
+        <h4 class="col-md-12">BILLING INFORMATION</h4><br>
+        <h6>CREDIT CARD</h6>
+
+        <div class="col-md-12 box">
+            <label>Card Holder Name</label>
+            <input class="form-control" type="text" value="Jón Jónsson" disabled>
+        </div>
+
+        <div class="col-md-8 box">
+            <label>Credit Card Number</label>
+            <input class="form-control" type="text" value="XXXX-XXXX-XXXX-1234" disabled>
+        </div>
+
+        <div class="col-md-4 box">
+            <label>CVC</label>
+            <input class="form-control" type="text" value="XX1" disabled>
+        </div>
+
+        <div class="col-md-12 box">
+            <label>Expiration Date</label>
+        </div>
+
+        <div class="col-md-4 box">
+            <label>Month</label>
+            <select name="month">
+                <option value="jan">01</option>
+                <option value="feb">02</option>
+                <option value="mar">03</option>
+                <option value="apr">04</option>
+                <option value="mai">05</option>
+                <option value="jun">06</option>
+                <option value="jul">07</option>
+                <option value="aug">08</option>
+                <option value="sep">09</option>
+                <option value="okt">10</option>
+                <option value="nov">11</option>
+                <option value="des">12</option>
+            </select>
+        </div>
+
+        <div class="col-md-4 box bottomBox">
+            <label>Year</label>
+            <select name="year">
+                <option value="okt">2017</option>
+                <option value="nov">2018</option>
+                <option value="des">2019</option>
+                <option value="jan">2020</option>
+                <option value="feb">2021</option>
+                <option value="mar">2022</option>
+                <option value="apr">2023</option>
+                <option value="mai">2024</option>
+                <option value="jun">2025</option>
+                <option value="jul">2026</option>
+            </select>
+        </div>
+
+        <a href="#" class="btn btn-primary col-md-6 col-md-offset-3 nextButton" id="toOrder">REVIEW ORDER</a>
+    </div>
+
+</div>
+
+<div class="container bottom-space col-md-4 col-md-offset-4" id="checkout_review" >
+    <div class="row">
+
+        <div class="col-md-12 top-space">
+            <h6 >EMAIL ADDRESS</h6>
+            <input type="text" class="form-control" placeholder="EMAIL ADDRESS" value="{{ user.email }}">
+        </div>
+
+        <div class="col-md-12 top-space">
+            <h6>DELIVERY INFORMATION</h6>
+
+            <input class="form-control" type="text" placeholder="FULL NAME" value="{{ user.full_name }}">
+            <input class="form-control" type="text" placeholder="ADDRESS" value="{{ user.address }}">
+            <input class="form-control" type="text" placeholder="APT/SUITE" value="{{ user.apt }}">
+            <input class="form-control" type="text" placeholder="CITY/TOWN" value="{{ user.city }}">
+            <input class="form-control" type="text" placeholder="ZIP" value="{{ user.zip }}">
+            <input class="form-control" type="text" placeholder="COUNTRY" value="{{ user.country }}">
+        </div>
+
+    </div>
+
+        <div class="row product">
+            <hr>
+            <div class="col-sm-4">
+                <div class="colLeft"><img src="../static/img/nes_console.png" class="productImg" alt="nes console"></div>
+            </div>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-sm-10"><h3 class="productName">Nintendo Entertainment System</h3></div>
+                </div>
+                <div class="row bottomCols">
+                    <div class="col-sm-3"><span><h5 class="price">5.000 kr</h5></span></div>
+                    <div class="col-sm-4">
+                        <span>
+                            Quantity:<p id="quantity">1</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h4 class="subtotal">Subtotal</h4>
+            </div>
+            <div class="col-sm-6">
+                <h4 class="subtotalPrice">5.000 kr</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <h4 class="shipping">Shipping</h4>
+            </div>
+            <div class="col-sm-6">
+                <h4 class="shippingPrice">490 kr</h4>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h4 class="total">Total</h4>
+            </div>
+            <div class="col-sm-6">
+                <h4 class="totalPrice">5.490 kr</h4>
+            </div>
+        </div>
+
+        <hr>
+    <a href="#" class="btn btn-primary col-md-6 col-md-offset-3 nextButton" id="toSummary">PLACE ORDER</a>
+</div>
+
+<div class="container bottom-space col-md-4 col-md-offset-4" id="checkout_summary" >
+
+    <div class="row">
+        <h1 class="titleText">Thank you for your order!</h1>
+        <h5 class="extraInfo">Your order has been placed and is being processed.</h5>
+        <h5 class="extraInfo">You will receive and email with the order details.</h5>
+    </div>
+
+
+    <div class="container col-md-6">
+        <div class="row">
+            <div class="col-md-12 orderDiv">
+                <h4>Order number:</h4>
+                <h4 id="orderNr">11556</h4>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+    $('#general').click(function() {
+        $('#checkout_billing').hide();
+        $('#checkout_review').hide();
+        $('#checkout_summary').hide();
+        $('#checkout_general').show()
+     });
+
+    $('#billing').click(function() {
+        $('#checkout_general').hide();
+        $('#checkout_review').hide();
+        $('#checkout_summary').hide();
+        $('#checkout_billing').show()
+     });
+
+    $('#order').click(function() {
+        $('#checkout_general').hide();
+        $('#checkout_summary').hide();
+        $('#checkout_billing').hide()
+        $('#checkout_review').show();
+     });
+
+    $('#summary').click(function() {
+        $('#checkout_general').hide();
+        $('#checkout_review').hide();
+        $('#checkout_billing').hide()
+        $('#checkout_summary').show();
+     });
+
+    $('#toBilling').click(function() {
+        $('#checkout_general').hide();
+        $('#checkout_review').hide();
+        $('#checkout_summary').hide()
+        $('#checkout_billing').show();
+     });
+
+    $('#toOrder').click(function() {
+        $('#checkout_general').hide();
+        $('#checkout_summary').hide();
+        $('#checkout_billing').hide()
+        $('#checkout_review').show();
+     });
+
+    $('#toSummary').click(function() {
+        $('#checkout_general').hide();
+        $('#checkout_review').hide();
+        $('#checkout_billing').hide()
+        $('#checkout_summary').show();
+     });
+</script>
+
+</body>
+</html>
