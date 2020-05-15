@@ -48,6 +48,6 @@
     margin-bottom: 10px;
 }
 
-.nohover {
-   pointer-events: none; 
+.product:hover {
+    box-shadow: none;
 }
