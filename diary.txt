@@ -1,4 +1,11 @@
 
+DAILY DIARY - VERKLEGT NÁMSKEIÐ 2
+
+Hinrik Snær Hjörleifsson - hinrik19@ru.is
+Patrekur Örn Friðrikssonv - patrekurf19@ru.is
+Pálmi Viðar Pétursson - palmi19@ru.is
+Snorri Vignisson - snorrivig18@ru.is
+Tekla Kristjánsdóttir - tekla18@ru.is
 
 27.04: We had a good look at the project description and then we set up a plan on the requirement analysis report
 
@@ -123,7 +130,7 @@
 
 13.05: Keep working on the remaining tasks
 
-    Tekla: Updated the signup look (html & css and checked for consistency on the site.
+    Tekla: Updated the signup look (html & css) and checked for consistency on the site.
     Hinni: Connected the products to the console and nes games so if you click on it you go to product/# (id)
     Patrekur: Fixed the look on the consoles and featured product so one product / text doesn't take up more space than
               another one. Made the price button in consoles and popular products clickable.
@@ -134,9 +141,9 @@
 
     Meeting and work hours from morning until midnight
 
-14.05: Keep working on the remaining tasks
+14.05: Keep working on the remaining tasks.
 
-    Tekla: Worked on and planned the video presentation, redesigned the checkout according to the rubric as well as coding it
+    Tekla: Worked on and planned the video presentation, redesigned the checkout according to the rubric as well as coding it.
     Hinni: Connected the random flow of the console and the popular products categories so there will always be 4 random
            products aligned on the front page which change.
            Worked on the functionality of profile and edit profile.
@@ -156,6 +163,8 @@
     Patrekur: Tried to fix the fact that the dropdown on the menu wasn't working everywhere.
     Pálmi: Finalized the search functionality. Did the functionality for order and checkout.
     Snorri: Lots of bug fixed, worked on the functionality of more pictures with a product, fixed the sizing of things.
+
+    Meeting and work hours all day.
 
 
 
