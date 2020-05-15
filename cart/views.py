@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from product.models import Product
 from user.models import User
 from cart.models import CartItem, Cart
+from product.views import get_menu
+from django.contrib.auth.forms import AuthenticationForm
 
 # Create your views here.
 
@@ -57,14 +59,16 @@ def delete_cartitem(request, id):
     return redirect(view_cart)
 
 def view_cart(request):
+    loginform = AuthenticationForm()
+    cats= get_menu()
     try:
         username_from_request = request.user.username
         user = User.objects.get(username=username_from_request)
         cartitems = user.cart.cart_item.all()
-        context = {'cartitems': cartitems}
+        context = {'cartitems': cartitems,'cats':cats,'loginform':loginform,}
         calc_total(user.cart)
     except:
-        context = {'cartitems': 'None'}
+        context = {'cartitems': 'None','cats':cats,'loginform':loginform,}
 
     return render(request, 'cart/index.html', context)
 

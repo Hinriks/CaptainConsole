@@ -53,7 +53,9 @@ def get_menu():
     cats = Category.objects.all()
     return cats
 
-
+def view_search(request, name):
+    context = {'products': Product.objects.filter(name__icontains=name)}
+    return render(request, 'product/index.html', context)
 
 # /product/3
 def get_product_by_id(request, id):
