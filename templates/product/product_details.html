@@ -8,16 +8,12 @@
 {% include 'menu.html' %}
     <h1 id="itemtitle">{{product.name}}</h1>
     <div class="centered">
-        <img class="itemicon" src="{{ product.productimage_set.first.image }}" alt="Profile">
+        <img class="itemicon product-image" src="{{ product.productimage_set.first.image }}" alt="Profile">
+        {% for image in product.productimage_set.all %}
         <div class="single-avatar">
-            <img class="productimage" src="https://api.adorable.io/avatars/200/abytt@adorable.png" alt="">
+            <img class="productimage" src="{{ image.image }}" alt="">
         </div>
-        <div class="single-avatar">
-            <img class="productimage" src="https://api.adorable.io/avatars/200/bbytt@adorable.png" alt="">
-        </div>
-        <div class="single-avatar">
-            <img class="productimage" src="https://api.adorable.io/avatars/200/cbytt@adorable.png" alt="">
-        </div>
+        {% endfor %}    
         <p id="desctext">{{product.description}}</p>
     </div>
     <div>
@@ -31,4 +27,11 @@
     
     {% endif %}
 
+<script>
+    $('.single-avatar').click(function() {
+        $('.single-avatar.active-avatar').removeClass('active-avatar')
+        $(this).addClass('active-avatar')
+        $('.product-image').attr('src', $(this).children().attr('src'))
+    })
+</script>
 {% endblock content %}

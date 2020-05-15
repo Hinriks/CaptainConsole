@@ -45,3 +45,8 @@
     display: grid;
     margin: auto;
 }
+
+.productcontainer {
+    height: 200px;
+    width: 263px;
+}

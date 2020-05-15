@@ -23,6 +23,7 @@
             {% csrf_token %}
             {{ loginform }}
             <div class="col text-center">
+                <button id="cancel-login" class="btn btn-light">Cancel</button>
                 <button class="btn btn-primary" type="submit">Login</button>
             </div>
         </form>
@@ -32,7 +33,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $('#account-closed-login').click(function() {
-        $('#account-closed').hide()
+        $('#account-closed').hide();
         $('#account-open').show()
-     })
+     });
+
+    $('#cancel-login').click(function(e) {
+        e.preventDefault();
+        $('#account-closed').show();
+        $('#account-open').hide()
+
+     });
 </script>
