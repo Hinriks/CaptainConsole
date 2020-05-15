@@ -5,37 +5,44 @@
     <link href="{% static 'css/shopping_cart.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/popular_products.css' %}" rel="stylesheet" type="text/css">
 
-        <h1 class="titleText">Catalog</h1>
-        <hr>
-        <div class="container col-md-10 col-md-offset-1">
-            <div class="row">
-                <div class="sortBy">
-                    Sort by:
+    <h1 class="titleText">Catalog</h1>
+    <hr>
+    <div class="container col-md-10 col-md-offset-1">
+        <div class="row">
+            <div class="sortBy">
+                <label>Sort by:
                     <select name="sort">
                         <option value="name">Name</option>
                         <option value="price">Price</option>
                     </select>
-                </div>
-            <hr>
+                </label>
+            </div>
+            <div class="filterBy">
+                <label>Filter by:
+                    <select name="filter">
+                        <option>virkar ekki hehe</option>
+                    </select>
+                </label>
+            </div>
 
-            <div class="products">
-                {% if products %}
-                {% for product in products %}
-                    <div>
-                        <a class="item" href="/product/{{ product.id }}">
-                            <img class="image_product" src="{{ product.productimage_set.first.image }}" alt="atari console">
-                            <h4 class="product_name">{{ product.name }}</h4>
-                            <h5 class="price">{{ product.price }}kr</h5>
-                        </a>
-                    </div>
-                {% endfor %}
-                {% else %}
-                <br>
-                <h1>NO Products</h1>
-                <br>
-                {% endif %}
+        <div class="products">
+            {% if products %}
+            {% for product in products %}
+                <div>
+                    <a class="item" href="/product/{{ product.id }}">
+                        <img class="image_product" src="{{ product.productimage_set.first.image }}" alt="atari console">
+                        <h4 class="product_name">{{ product.name }}</h4>
+                        <h5 class="price">{{ product.price }}kr</h5>
+                    </a>
                 </div>
-                </div>
+            {% endfor %}
+            {% else %}
+            <br>
+            <h1>NO Products</h1>
+            <br>
+            {% endif %}
+            </div>
+            </div>
 
-        </div>
+    </div>
 {% endblock %}
