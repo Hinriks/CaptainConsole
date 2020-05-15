@@ -54,18 +54,23 @@ def get_menu():
     return cats
 
 def view_search(request, name):
-    context = {'products': Product.objects.filter(name__icontains=name)}
+    prodcts = Product.objects.filter(name__icontains=name)
+
+    context = {'products': products}
     return render(request, 'product/index.html', context)
 
 def view_catagory(request, id):
+    loginform = AuthenticationForm()
     cat = get_object_or_404(Category, pk=id)
-    context = {'products': Product.objects.filter(category=cat)}
+    context = {'products': Product.objects.filter(category=cat),'loginform':loginform,}
     return render(request, 'product/index.html', context)
 
 
 # /product/3
 def get_product_by_id(request, id):
-    context = {'product': get_object_or_404(Product, pk=id)}
+    loginform = AuthenticationForm()
+    cats= get_menu()
+    context = {'product': get_object_or_404(Product, pk=id),'loginform':loginform,'cats':cats}
     return render(request, 'product/product_details.html',context)
 
 
