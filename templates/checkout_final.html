@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,18 +16,18 @@
 </head>
 <body>
 
-<div class="container bottom-space col-md-4 col-md-offset-4" >
+<div class="container bottom-space col-md-8 col-md-offset-2 menuBar" >
     <div class="row">
-        <div class="btn-group btn-group-justified menuBar" role="group" aria-label="Basic example">
-            <a id="general" href="#" class="btn btn-primary">General</a>
-            <a id="billing" href="#" class="btn btn-primary">Billing</a>
-            <a id="order" href="#" class="btn btn-primary">Order</a>
-            <a id="summary" href="#" class="btn btn-primary">Summary</a>
+        <div class="btn-group btn-group-justified" role="group" aria-label="Basic example">
+            <a href="#" class="btn btn-primary" id="general">General</a>
+            <a href="#" class="btn btn-primary" id="billing">Billing</a>
+            <a href="#" class="btn btn-primary" id="order">Order Review</a>
+            <a href="#" class="btn btn-primary" id="confirmation">Confirmation</a>
         </div>
     </div>
 </div>
 
-<div class="container bottom-space col-md-4 col-md-offset-4" id="checkout_general" >
+<div class="container bottom-space col-md-8 col-md-offset-2" id="checkout_general" >
     <div class="row">
 
         <h4 class="col-md-8 top-space">GENERAL INFORMATION</h4>
@@ -83,10 +84,10 @@
     </div>
 </div>
 
-<div class="container bottom-space col-md-4 col-md-offset-4" id="checkout_billing">
+<div class="container bottom-space col-md-8 col-md-offset-2" id="checkout_billing">
     <div class="row">
-        <h4 class="col-md-12">BILLING INFORMATION</h4><br>
-        <h6>CREDIT CARD</h6>
+        <h4 class="col-md-12">BILLING INFORMATION</h4>
+        <h5 class="col-md-12">CREDIT CARD</h5>
 
         <div class="col-md-12 box">
             <label>Card Holder Name</label>
@@ -146,7 +147,7 @@
 
 </div>
 
-<div class="container bottom-space col-md-4 col-md-offset-4" id="checkout_review" >
+<div class="container bottom-space col-md-8 col-md-offset-2" id="checkout_review" >
     <div class="row">
 
         <div class="col-md-12 top-space">
@@ -215,18 +216,19 @@
             <div class="col-sm-6">
                 <h4 class="totalPrice">5.490 kr</h4>
             </div>
-        </div>
+            <a href="#" class="btn btn-primary col-md-6 col-md-offset-3 nextButton" id="toConfirmation">PLACE ORDER</a>
 
-        <hr>
-    <a href="#" class="btn btn-primary col-md-6 col-md-offset-3 nextButton" id="toSummary">PLACE ORDER</a>
+        </div>
 </div>
 
-<div class="container bottom-space col-md-4 col-md-offset-4" id="checkout_summary" >
+<div class="container bottom-space col-md-8 col-md-offset-2" id="checkout_confirmation" >
 
-    <div class="row">
-        <h1 class="titleText">Thank you for your order!</h1>
-        <h5 class="extraInfo">Your order has been placed and is being processed.</h5>
-        <h5 class="extraInfo">You will receive and email with the order details.</h5>
+    <div class="container col-md-6">
+        <div class="row">
+            <h1 class="titleText">Thank you for your order!</h1>
+            <h5 class="extraInfo">Your order has been placed and is being processed.</h5>
+            <h5 class="extraInfo">You will receive an email with the order details.</h5>
+        </div>
     </div>
 
 
@@ -238,6 +240,7 @@
             </div>
         </div>
     </div>
+</div>
 
 
 
@@ -250,50 +253,50 @@
     $('#general').click(function() {
         $('#checkout_billing').hide();
         $('#checkout_review').hide();
-        $('#checkout_summary').hide();
+        $('#checkout_confirmation').hide();
         $('#checkout_general').show()
      });
 
     $('#billing').click(function() {
         $('#checkout_general').hide();
         $('#checkout_review').hide();
-        $('#checkout_summary').hide();
+        $('#checkout_confirmation').hide();
         $('#checkout_billing').show()
      });
 
     $('#order').click(function() {
         $('#checkout_general').hide();
-        $('#checkout_summary').hide();
+        $('#checkout_confirmation').hide();
         $('#checkout_billing').hide()
         $('#checkout_review').show();
      });
 
-    $('#summary').click(function() {
+    $('#confirmation').click(function() {
         $('#checkout_general').hide();
         $('#checkout_review').hide();
         $('#checkout_billing').hide()
-        $('#checkout_summary').show();
+        $('#checkout_confirmation').show();
      });
 
     $('#toBilling').click(function() {
         $('#checkout_general').hide();
         $('#checkout_review').hide();
-        $('#checkout_summary').hide()
+        $('#checkout_confirmation').hide()
         $('#checkout_billing').show();
      });
 
     $('#toOrder').click(function() {
         $('#checkout_general').hide();
-        $('#checkout_summary').hide();
+        $('#checkout_confirmation').hide();
         $('#checkout_billing').hide()
         $('#checkout_review').show();
      });
 
-    $('#toSummary').click(function() {
+    $('#toConfirmation').click(function() {
         $('#checkout_general').hide();
         $('#checkout_review').hide();
         $('#checkout_billing').hide()
-        $('#checkout_summary').show();
+        $('#checkout_confirmation').show();
      });
 </script>
 
