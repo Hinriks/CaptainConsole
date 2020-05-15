@@ -5,13 +5,13 @@
         <img class="accounticon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">
         <img class="accountimage" src="{{ user.avatar_img }}" alt="Profile">
         <a id="accountname" href="{% url 'user:profile'%}">{{ user.username }}</a><br>
-        <a id="logout" href="{% url 'user:logout' %}">Log out</a>
+        <a class="logout" href="{% url 'user:logout' %}">Log out</a>
     </div>
     <div class="img-with-text" id="smallaccountdiv">
         <img class="accounticon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">
-        <img class="accountimage" src="{% static 'img/castlevania.jpg' %}" alt="Profile">
+        <img class="accountimage" src="{{ user.avatar_img }}" alt="Profile"><br>
         {% if request.user.is_authenticated %}
-        <h4>{{ user.username }}</h4>
+        <a class="logout" href="{% url 'user:logout' %}">Log out</a>
         {% else %}
         <h4>Log in</h4>
         {% endif %}

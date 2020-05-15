@@ -23,5 +23,9 @@ class User(AbstractUser):
     date_of_birth = models.DateField(default=datetime.date.today, blank=True)
     phone_number = models.CharField(max_length=8, blank=True)
 
+User._meta.get_field('username').validators[1].limit_value = 15
+User._meta.get_field('username').max_length = 15
+User._meta.get_field('username').help_text = ('Required. 15 characters or fewer. Letters, digits and @/./+/-/_ only.')
+
 class Order(models.Model):
     pass

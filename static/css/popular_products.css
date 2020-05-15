@@ -42,6 +42,6 @@
 .image_product {
     max-width: 250px;
     max-height: 200px;
+    display: grid;
+    margin: auto;
 }
-
-

@@ -51,6 +51,7 @@
                 {% else %}
             </div>
                 <h3> Total: {{cartitems.first.cart.total}}kr</h3>
+                <a href="{% url 'product-index' %}"><button type="button" class="btn btn-primary checkout">Continue shopping</button></a>
                 <a href="{% url 'product-index' %}"><button type="button" class="btn btn-primary checkout">CHECKOUT</button></a>
             {% endif %}
          {% else %}
