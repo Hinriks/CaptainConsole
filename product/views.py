@@ -20,6 +20,14 @@ def homepage(request):
 
 
 def index(request):
+    cats = get_menu()
+    loginform = AuthenticationForm()
+    sort = 'name'
+    print (request.GET)
+    if 'sort' in request.GET:
+        print ("sort in request.get")
+        if request.GET['sort'] == 'price':
+            sort = 'price'
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
         products = [ {
@@ -27,10 +35,11 @@ def index(request):
             'name': x.name,
             'description': x.description,
             'firstImage': x.productimage_set.first().image
-        } for x in Product.objects.filter(name__icontains=search_filter)]
+        } for x in Product.objects.filter(name__icontains=search_filter).order_by(sort)]
         return JsonResponse({ 'data': products })
-    context = {'products': Product.objects.all().order_by('name')}
+    context = {'products': Product.objects.all().order_by(sort), 'loginform': loginform, 'cats': cats}
     return render(request, 'product/index.html', context)
+
 
 def get_popular_products():
     """ Get random 4 products to display in Popular Products """
@@ -38,11 +47,13 @@ def get_popular_products():
     random_products = random.sample(products, 4)
     return random_products
 
+
 def get_featured_products():
     """ Get first 4 products from featured category """
     products = list(Product.objects.filter(featured=True))
     featured_products = products[:4]
     return featured_products
+
 
 def get_promos():
     promos = Promo.objects.all().filter(active=True)
@@ -53,18 +64,30 @@ def get_menu():
     cats = Category.objects.all()
     return cats
 
+
 def view_search(request, name):
     cats = get_menu()
     loginform = AuthenticationForm()
     #cat = get_object_or_404(Category, pk=id)
     products = Product.objects.filter(name__icontains=name)
-    context = {'products': products,'loginform':loginform,'cats':cats}
+    context = {'products': products, 'loginform': loginform, 'cats': cats}
+    return render(request, 'product/index.html', context)
+
+def view_sort(request, sort, order):
+    cats = get_menu()
+    loginform = AuthenticationForm()
+    if order == 0:
+        products = Product.objects.all().order_by(sort)
+    else:
+        products = Product.objects.all().order_by(sort).reverse()
+    context = {'sort': sort, 'order': order, 'products': products, 'loginform': loginform, 'cats': cats }
     return render(request, 'product/index.html', context)
 
 def view_catagory(request, id):
+    cats = get_menu();
     loginform = AuthenticationForm()
     cat = get_object_or_404(Category, pk=id)
-    context = {'products': Product.objects.filter(category=cat),'loginform':loginform,}
+    context = {'products': Product.objects.filter(category=cat),'loginform':loginform, 'cats': cats}
     return render(request, 'product/index.html', context)
 
 

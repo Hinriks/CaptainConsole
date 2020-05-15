@@ -15,6 +15,11 @@
     margin-top: 20px;
 }
 
-.sortBy, .filterBy {
+.sortBy {
     margin-left: 20px;
+    margin-bottom: 40px;
+}
+.sortBy div {
+    display:inline-block;
+    cursor:pointer;
 }
