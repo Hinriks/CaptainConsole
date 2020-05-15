@@ -27,7 +27,7 @@
         <div class="dropdown-menu bg-color size" aria-labelledby="dropdown1">
         {% for subcat in cats %}
         {% if subcat.parent_category == cat %}
-          <a class="dropdown-item" href="{% url 'product-index' %}">{{subcat.name}}</a>
+          <a class="dropdown-item" href="{% url 'view_catagory' id=subcat.id %}">{{subcat.name}}</a>
         {% endif %}
         {% endfor %}
         </div>

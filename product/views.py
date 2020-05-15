@@ -57,6 +57,12 @@ def view_search(request, name):
     context = {'products': Product.objects.filter(name__icontains=name)}
     return render(request, 'product/index.html', context)
 
+def view_catagory(request, id):
+    cat = get_object_or_404(Category, pk=id)
+    context = {'products': Product.objects.filter(category=cat)}
+    return render(request, 'product/index.html', context)
+
+
 # /product/3
 def get_product_by_id(request, id):
     context = {'product': get_object_or_404(Product, pk=id)}
