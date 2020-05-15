@@ -156,4 +156,9 @@
         border-radius: 50%;
     }
     
+    .login-text {
+        font-size:large;
+        padding: 0px;
+        margin: 0px;
+    }
 }

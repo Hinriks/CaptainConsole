@@ -9,12 +9,12 @@
 {#    {% url 'login' %} #}
 </div>
 <div class="img-with-text small-account-div">
-    <img class="account-closed-icon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">
+    <img class="account-closed-icon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile"><br>
 {#    <img class="account-image" src="{% static 'img/castlevania.jpg' %}" alt="Profile">#}
     {% if request.user.is_authenticated %}
     <h4>{{ user.username }}</h4>
     {% else %}
-    <h4>Log in</h4>
+    <a href="#" id="account-closed-login" class="login-text">Log in</a>
     {% endif %}
 </div>
 <div id="account-open" class="account-open-div row">
