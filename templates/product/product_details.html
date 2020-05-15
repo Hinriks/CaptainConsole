@@ -4,16 +4,25 @@
 
 <link rel="stylesheet" href="{% static 'css/item.css' %}">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-<body>
+
 {% include 'menu.html' %}
-    <div>
+    <h1 id="itemtitle">{{product.name}}</h1>
+    <div class="centered">
         <img class="itemicon" src="{{ product.productimage_set.first.image }}" alt="Profile">
-        <h1 id="itemtitle">{{product.name}}</h1>
-        <p id="desctext">{{product.description}}</p>
-        <div>
-            <p class="button" id="price">{{product.price}}.-kr</p>
-            <a href="{% url 'add_to_cart' product.id %}" class="button" id="addtocart">Add to Cart</a>
+        <div class="single-avatar">
+            <img class="productimage" src="https://api.adorable.io/avatars/200/abytt@adorable.png" alt="">
         </div>
+        <div class="single-avatar">
+            <img class="productimage" src="https://api.adorable.io/avatars/200/bbytt@adorable.png" alt="">
+        </div>
+        <div class="single-avatar">
+            <img class="productimage" src="https://api.adorable.io/avatars/200/cbytt@adorable.png" alt="">
+        </div>
+        <p id="desctext">{{product.description}}</p>
+    </div>
+    <div>
+        <p class="button " id="price">{{product.price}}.-kr</p>
+        <a href="{% url 'add_to_cart' product.id %}" class="button" id="addtocart">Add to Cart</a>
     </div>
     {% if user.is_staff == True %}
 
@@ -21,5 +30,5 @@
         <a href="{% url 'update_product' product.id %}" class="block btn btn-primary">Update Product</a>
     
     {% endif %}
-</body>
+
 {% endblock content %}
