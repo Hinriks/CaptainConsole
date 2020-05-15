@@ -25,10 +25,17 @@
 }
 
 .image_product {
-    width: 250px;
-    height: 250px;
+    max-width: 250px;
+    max-height: 250px;
+    display: grid;
+    margin: auto;
 }
 
 .item {
     color: black;
+}
+
+.productcontainer {
+    width: 263px;
+    height: 200px;
 }

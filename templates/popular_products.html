@@ -5,11 +5,12 @@
     <div class="popular">
         {% for product in popular_products %}
             <a class="item" href="/product/{{ product.id }}">
-                <div class="productDiv">
+                <div class="productcontainer">
                     <img class="image_product" src="{{ product.productimage_set.first.image }}" alt="{{ product.name }}">
-                    <h4 class="product_name">{{ product.name }}</h4>
-                    <h5 class="price">{{ product.price }}kr</h5>
+                    
                 </div>
+                <h4 class="product_name">{{ product.name }}</h4>
+                <h5 class="price">{{ product.price }}kr</h5>
             </a>
         {% endfor %}
     </div>
