@@ -9,12 +9,12 @@
 {#    {% url 'login' %} #}
 </div>
 <div class="img-with-text small-account-div">
-    <img class="account-closed-icon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile">
+    <img class="account-closed-icon" src="{% static 'img/ProfileIcon.png' %}" alt="Profile"><br>
 {#    <img class="account-image" src="{% static 'img/castlevania.jpg' %}" alt="Profile">#}
     {% if request.user.is_authenticated %}
     <h4>{{ user.username }}</h4>
     {% else %}
-    <h4>Log in</h4>
+    <a href="#" id="account-closed-login" class="login-text">Log in</a>
     {% endif %}
 </div>
 <div id="account-open" class="account-open-div row">
@@ -24,6 +24,7 @@
             {{ loginform }}
             <div class="col text-center">
                 <button class="btn btn-primary" type="submit">Login</button>
+                <button id="cancel" class="btn btn-primary" type="submit">Cancel</button>
             </div>
         </form>
     </div>
@@ -32,7 +33,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $('#account-closed-login').click(function() {
-        $('#account-closed').hide()
+        $('#account-closed').hide();
         $('#account-open').show()
-     })
+     });
+
+    $('#cancel').click(function() {
+        $('#account-closed').show();
+        $('#account-open').hide()
+     });
 </script>

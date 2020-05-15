@@ -1,5 +1,5 @@
-from django.shortcuts import render,redirect
-from .forms import SignUpForm
+from django.shortcuts import render, redirect, get_object_or_404
+from .forms import SignUpForm, UserUpdateForm
 from django.contrib.auth import login, authenticate 
 from product.views import homepage
 from product.urls import urlpatterns
@@ -15,7 +15,7 @@ def view_profile(request):
 
 def edit_profile(request):
     user = request.user
-    context= {'user': user}
+    context = {'user': user}
     return render(request, 'edit_profile.html', context)
 
 def signup_view(request):
@@ -38,5 +38,19 @@ def signup_view(request):
     return render(request, 'registration/signup_general.html', context)
 
 
+def update_user(request):
+    user = request.user
+    context = {'user': user}
+    if request.method == 'POST':
+        form = UserUpdateForm(data=request.POST, instance=request.user)
+        print(form.errors)
+        if form.is_valid():
+            form.save()
+            return render(request, 'profile.html', context)
+        else:
+            return render(request, 'profile.html', context)
+    else:
+        return render(request, 'profile.html', context)
+# ProductUpdateForm -> búa til forms folder fyrir user og setja upp update model
     
 

@@ -1,9 +1,11 @@
 
 
-#checkout_billing, #checkout_review, #checkout_confirmation {
+#checkout_billing, #checkout_review {
     display: none;
 }
-
+#checkout_confirmation {
+    margin: 200px 0;
+}
 .nextButton {
     margin: auto;
     margin-top: 10px;
@@ -12,11 +14,20 @@
 
 .menuBar {
     margin-bottom: 20px;
+    margin-top: 40px;
 }
-
+.menuBar-buttons {
+    margin: 0 auto;
+}
+.menuBar-buttons a {
+    width:15vw;
+}
 .shipping_margin {
     padding-top: 15px;
 }
 
-
-
+@media screen and (min-width: 1201px) {
+    .menuBar-buttons a {
+        width:200px;
+    }
+}

@@ -1,5 +1,5 @@
 import datetime
-
+from cart.models import Cart
 from django.db import models
 
 # Create your models here.
@@ -28,4 +28,25 @@ User._meta.get_field('username').max_length = 15
 User._meta.get_field('username').help_text = ('Required. 15 characters or fewer. Letters, digits and @/./+/-/_ only.')
 
 class Order(models.Model):
-    pass
+    cart = models.ForeignKey(Cart, on_delete=models.CASCADE, null=True)
+    is_ordered = models.BooleanField(default=False)
+    date_ordered = models.DateTimeField(auto_now=True)
+    full_name = models.CharField(max_length=150)
+    email = models.CharField(max_length=150)
+    phone_number = models.CharField(max_length=150)
+    address = models.CharField(max_length=150)
+    apt = models.CharField(max_length=150)
+    city = models.CharField(max_length=150)
+    zip = models.CharField(max_length=150)
+    country = models.CharField(max_length=150)
+
+    card_name = models.CharField(max_length=150)
+    card_number = models.CharField(max_length=16)
+    card_cvc = models.CharField(max_length=3)
+    card_exp_month = models.CharField(max_length=2)
+    card_exp_year = models.CharField(max_length=4)
+
+
+    def __str__(self):
+        return '{} - {}'.format(1, self.id)
+
