@@ -2,6 +2,9 @@ import datetime
 from cart.models import Cart
 from django.db import models
 
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
 # Create your models here.
 from django.contrib.auth.models import AbstractUser
 
@@ -50,3 +53,13 @@ class Order(models.Model):
     def __str__(self):
         return '{} - {}'.format(1, self.id)
 
+
+@receiver(post_save, sender=Order)
+def remove_user_from_cart(sender, instance, created, **kwargs):
+    if not created:
+        user_i = instance.cart.user
+        cart = user_i.cart
+        cart.user = None
+        user_i.cart = Cart()
+        cart.save()
+        user_i.cart.save()
