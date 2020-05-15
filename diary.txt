@@ -164,7 +164,6 @@ Tekla Kristjánsdóttir - tekla18@ru.is
     Pálmi: Finalized the search functionality. Did the functionality for order and checkout.
     Snorri: Lots of bug fixed, worked on the functionality of more pictures with a product, fixed the sizing of things.
 
-
     Meeting and work hours all day.
 
 
