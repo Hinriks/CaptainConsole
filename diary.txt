@@ -109,7 +109,7 @@ Tekla Kristjánsdóttir - tekla18@ru.is
 11.05: Finalized html & css as well as cleaning it up and bug fixes.
 
     Tekla: Bug fixed and cleaned up the html & css
-    Hinni:...?
+    Hinni: Created url's for all destinations and helped Pálmi.
     Patrekur: Did the html & css for all products.
     Pálmi: Worked on the functionality for login.
     Snorri: Started connecting all buttons to destination as well as the website as a whole
@@ -156,13 +156,14 @@ Tekla Kristjánsdóttir - tekla18@ru.is
 
     Meeting and work hours from morning until late night.
 
-15.05: DUE DATE
+15.05: DUE DATE... many small tasks that were finished that meaby didn't reach the list here down below
 
     Tekla: Finalized the checkout model and added more pictures to each product.
     Hinni: Finalized the edit profile functionality, Did the functionality for order and checkout.
     Patrekur: Tried to fix the fact that the dropdown on the menu wasn't working everywhere.
     Pálmi: Finalized the search functionality. Did the functionality for order and checkout.
     Snorri: Lots of bug fixed, worked on the functionality of more pictures with a product, fixed the sizing of things.
+
 
     Meeting and work hours all day.
 
