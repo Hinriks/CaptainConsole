@@ -30,11 +30,15 @@
             {% for product in products %}
                 <div>
                     <a class="item" href="/product/{{ product.id }}">
-                        <img class="image_product" src="{{ product.productimage_set.first.image }}" alt="atari console">
+                        <div class="productcontainer">
+                        <img class="image_product" src="{{ product.productimage_set.first.image }}" alt="{{ product.name }}">
+                        </div>
                         <h4 class="product_name">{{ product.name }}</h4>
                         <h5 class="price">{{ product.price }}kr</h5>
                     </a>
+                
                 </div>
+                
             {% endfor %}
             {% else %}
             <br>
