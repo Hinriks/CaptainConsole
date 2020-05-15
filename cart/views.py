@@ -68,6 +68,10 @@ def view_cart(request):
 
     return render(request, 'cart/index.html', context)
 
+def view_checkout(request):
+
+    return render(request, 'order_summary.html')
+
 
 def order(request):
     #TODO Setja upp þannig að það sé stage 1 og 2 af order en halda sama url. Bannaður beinn aðgangur
@@ -77,37 +81,3 @@ def order(request):
 def receipt(request, id):
     #TODO Ef "receipt.owner = user" þá kemstu á þessa síðu annars aðgangur bannaður (403)
     return render(request, 'order/receipt.html')
-
-"""
-    username_from_request = request.user.username
-    user = User.objects.get(username=username_from_request)
-    cart = user.cart
-    context = {'cart': }
-    return render(request, 'product/index.html', context)
- """
-            
-
-
-
-
-
-
-
-    #TODO ALLT HEHE
-"""
-    #Virkar ekki shit
-    if request.GET:
-        pass
-    if request.POST:
-        user = request.logged_in_user
-        if user.cart:
-            cart_item = CartItem()
-        else:
-            cart1 = Cart()
-            cart_item1 = CartItem()
-            cart1.user = user
-            cart_item1.cart = cart1
-            .
-            .
-            cart1.save()
-"""

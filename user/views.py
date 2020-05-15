@@ -16,3 +16,4 @@ def edit_profile(request):
 def signup(request):
 
     return render(request, 'signup_general.html')
+

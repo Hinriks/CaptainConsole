@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from product.forms.product_form import ProductCreateForm, ProductUpdateForm
-from product.models import Product, ProductImage,Promo
+from product.models import Product, ProductImage, Promo, Category
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login
 import random
@@ -14,7 +14,8 @@ def homepage(request):
     featured_products = get_featured_products()
     user = get_user(request)
     promos = get_promos()
-    context = {'popular_products': random_products, 'featured_products': featured_products, 'promos': promos, 'user': user, 'loginform':loginform}
+    cats = get_menu()
+    context = {'popular_products': random_products, 'featured_products': featured_products, 'promos': promos, 'user': user, 'loginform':loginform, 'cats': cats}
     return render(request, 'home/index.html', context)
 
 
@@ -46,6 +47,12 @@ def get_featured_products():
 def get_promos():
     promos = Promo.objects.all().filter(active=True)
     return promos
+
+
+def get_menu():
+    cats = Category.objects.all()
+    return cats
+
 
 
 # /product/3
