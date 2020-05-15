@@ -47,13 +47,13 @@
                 {% endfor %}
             
                 {% if not cartitems %}
-                    <h1>CART IS EMPTY</h1>
+                    <h1 class="pagefiller">CART IS EMPTY</h1>
                 {% else %}
             </div>
                 <h3> Total: {{cartitems.first.cart.total}}kr</h3>
                 <a href="{% url 'product-index' %}"><button type="button" class="btn btn-primary checkout">CHECKOUT</button></a>
             {% endif %}
          {% else %}
-              <h1> User is not logged in.</h1>
+              <h1 class="pagefiller"> user is not logged in</h1>
           {% endif %}
 {% endblock %}
