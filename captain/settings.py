@@ -25,7 +25,7 @@ SECRET_KEY = 'uckf-v$=j!*$apj80je!xy(ehymn2sli25j(us$wfaxrx$i5k&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

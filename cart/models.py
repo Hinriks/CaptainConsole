@@ -1,6 +1,5 @@
 from django.db import models
 from product.models import Product
-from user.models import User
 from django.conf import settings
 
 
@@ -28,7 +27,7 @@ class Cart(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
     active = models.BooleanField(default=True)
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='cart')
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL,null=True, related_name='cart')
 
     def __str__(self):
         return "{} Cart".format(self.user)

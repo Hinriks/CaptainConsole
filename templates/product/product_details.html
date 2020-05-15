@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="{% static 'css/item.css' %}">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-<body>
+
 {% include 'menu.html' %}
     <h1 id="itemtitle">{{product.name}}</h1>
     <div class="centered">
@@ -30,5 +30,5 @@
         <a href="{% url 'update_product' product.id %}" class="block btn btn-primary">Update Product</a>
     
     {% endif %}
-</body>
+
 {% endblock content %}
