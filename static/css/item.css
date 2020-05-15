@@ -1,17 +1,20 @@
 .itemicon {
-    width: 300px;
-    max-height: 400px;
-    margin: 2% 2% 2% 2%;
+    max-width: 300px;
+    max-height: 150px;
+    margin: 0% 2%;
     float: left;
 }
 
-#itemtitle {
-    padding-top: 2%;
+.avatar-collection {
+    float: left;
+    width: 400px;
 }
 
 #desctext {
     font-size: medium;
     width: 100%;
+    margin-left: 0px;
+    margin-top: 50px;
 }
 
 .button {
@@ -27,8 +30,6 @@
 
 #price {
     background-color: #599DB6;
-    margin-right: 1%;
-    margin-left: 1%;
 }
 
 #addtocart {
@@ -37,13 +38,26 @@
     font-size: medium;
     margin-top: 0.5%;
     text-decoration: none;
-    color: white;
+
 }
 
 #addtocart:hover {
     background-color: #5e7681;
 }
 
-#cartdiv {
-    margin: 0px auto;
+
+.productimage {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.single-avatar {
+    margin-top: 5px;
+    max-width: 50px;
+    max-height: 50px;
+    margin-left: 400px;
+}
+
+.centered {
+    margin: auto;
 }
