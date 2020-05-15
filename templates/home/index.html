@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    {% include 'menu.html' %}
+    {% include 'menu.html' with cats=cats%}
     {% include 'promo.html' with promos=promos %}
     {% include 'featured_products.html' with featured_products=featured_products %}
     {% include 'popular_products.html' with popular_products=popular_products %}

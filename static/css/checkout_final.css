@@ -1,0 +1,22 @@
+
+
+#checkout_billing, #checkout_review, #checkout_summary {
+    display: none;
+}
+
+#general:target {
+    background-color: black;
+}
+
+#general, #billing, #order, #summary {
+    width: 130px;
+}
+
+.menuBar {
+    text-align: center;
+}
+
+.nextButton {
+    margin: auto;
+    margin-top: 10px;
+}

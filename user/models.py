@@ -23,3 +23,5 @@ class User(AbstractUser):
     date_of_birth = models.DateField(default=datetime.date.today, blank=True)
     phone_number = models.CharField(max_length=8, blank=True)
 
+class Order(models.Model):
+    pass
