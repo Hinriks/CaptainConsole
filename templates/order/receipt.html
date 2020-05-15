@@ -1,4 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-<p>Receipt</p>
+{% load static %}
+<link href="{% static 'css/order_summary.css' %}" rel="stylesheet" type="text/css" >
+<link href="{% static 'css/shopping_cart.css' %}" rel="stylesheet" type="text/css" >
+<link href="{% static 'css/checkout_final.css' %}" rel="stylesheet" type="text/css">
+<div class="container bottom-space col-md-8 col-md-offset-2" id="checkout_confirmation" >
+
+    <div class="col-md-6 offset-md-3">
+            <h1 class="titleText">Thank you for your order!</h1>
+            <h5 class="extraInfo">Your order has been placed and is being processed.</h5>
+            <h5 class="extraInfo">You will receive an email with the order details.</h5>
+    </div>
+
+
+    <div class="col-md-6  offset-md-3">
+        <div class="row">
+            <div class="col-md-12 orderDiv">
+                <h4>Order number:</h4>
+                <h4 id="orderNr">{{ order.id }}</h4>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
