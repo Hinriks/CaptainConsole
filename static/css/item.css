@@ -1,7 +1,7 @@
 .itemicon {
     max-width: 300px;
-    max-height: 150px;
-    margin: 0% 2%;
+    max-height: 200px;
+    margin-left: 8%;
     float: left;
 }
 
@@ -12,8 +12,8 @@
 
 #desctext {
     font-size: medium;
-    width: 100%;
-    margin-left: 0px;
+    width: 80%;
+    margin-left: 8%;
     margin-top: 50px;
 }
 
@@ -30,6 +30,7 @@
 
 #price {
     background-color: #599DB6;
+    margin-left: 8%;
 }
 
 #addtocart {
@@ -60,4 +61,8 @@
 
 .centered {
     margin: auto;
+}
+
+#itemtitle {
+    margin-left: 8%;
 }
