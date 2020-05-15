@@ -26,7 +26,6 @@
         </p>
         </a>
         <div class="dropdown-menu bg-color size" aria-labelledby="dropdown1">
-           <a class="dropdown-item" href="{% url 'view_catagory' id=cat.id %}">All {{cat.name}}</a>
           {% for subcat in cats %}
               {% if subcat.parent_category == cat %}
                 <a class="dropdown-item" href="{% url 'view_catagory' id=subcat.id %}">{{subcat.name}}</a>
