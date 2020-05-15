@@ -1,4 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from .forms import SignUpForm
+from django.contrib.auth import login, authenticate 
+from product.views import homepage
+from product.urls import urlpatterns
 
 
 # Create your views here.
@@ -13,7 +17,23 @@ def edit_profile(request):
     context= {'user': user}
     return render(request, 'edit_profile.html', context)
 
-def signup(request):
-
-    return render(request, 'signup_general.html')
+def signup_view(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        print(form.errors)
+        if form.is_valid():
+            user = form.save()
+            user.first_name = form.cleaned_data.get('first_name')
+            user.last_name = form.cleaned_data.get('last_name')
+            user.email = form.cleaned_data.get('email')
+            user.save()
+            login(request, user)
+            print('form is valid')
+            return redirect('homepage')
+        else:
+            print('form is not valid')
+            form = SignUpForm()
+            context = {'form': form}
+    return render(request, 'registration/signup_general.html', context)
+    
 

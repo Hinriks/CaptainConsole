@@ -1,0 +1,16 @@
+{% load static %}
+
+    <link href="{% static 'css/featured_products.css' %}" rel="stylesheet" type="text/css" >
+
+    <a href="{% url 'view_catagory' id=cat.id %}"><h3 id="title">{{cat.name}}</h3></a>
+    <div class="featured">
+        {% for product in  %}
+            <a class="item" href="/product/{{ product.id }}">
+                <div>
+                    <img class="image_product" src="{{ product.productimage_set.first.image }}" alt="{{ product.name }}">
+                    <h4 class="product_name">{{ product.name }}</h4>
+                    <h5 class="price">{{ product.price }}kr</h5>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
