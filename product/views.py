@@ -54,9 +54,11 @@ def get_menu():
     return cats
 
 def view_search(request, name):
+    cats = get_menu()
+    loginform = AuthenticationForm()
+    #cat = get_object_or_404(Category, pk=id)
     products = Product.objects.filter(name__icontains=name)
-
-    context = {'products': products}
+    context = {'products': products,'loginform':loginform,'cats':cats}
     return render(request, 'product/index.html', context)
 
 def view_catagory(request, id):
