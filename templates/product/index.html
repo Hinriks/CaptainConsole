@@ -1,43 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    {% comment %}<h2>All Products</h2>
-
-    <div class="input-group">
-        <input type="search" class="form-control" id="search-box" placeholder="Enter your search here.."/>
-        <div class="input-group-btn">
-            <button type="button" id="search-btn" class="btn btn-default">Search</button>
-        </div>
-    </div>
-    <div class="products">
-    {% for product in products %}
-        {% include 'product/single_product.html' with product=product %}
-    {% endfor %}
-    </div>{% endcomment %}
-
-
-
     <link href="{% static 'css/catalog.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/shopping_cart.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/popular_products.css' %}" rel="stylesheet" type="text/css">
-    <body>
 
         <h1 class="titleText">Catalog</h1>
         <hr>
-
         <div class="container col-md-10 col-md-offset-1">
             <div class="row">
-
-                <div class="category">
-                    Category:
-                    <select name="category">
-                        <option value="consoles">Consoles</option>
-                        <option value="games">Games</option>
-                        <option value="accessories">Accessories</option>
-                        <option value="accessories">Other</option>
-                    </select>
-                </div>
-
                 <div class="sortBy">
                     Sort by:
                     <select name="sort">
@@ -45,11 +16,10 @@
                         <option value="price">Price</option>
                     </select>
                 </div>
-
-            </div>
             <hr>
 
             <div class="products">
+                {% if products %}
                 {% for product in products %}
                     <div>
                         <a class="item" href="/product/{{ product.id }}">
@@ -58,28 +28,14 @@
                             <h5 class="price">{{ product.price }}kr</h5>
                         </a>
                     </div>
-
-                    {% comment %}
-                    <div>
-                        <a href=""><img class="image_product" src="../static/img/ps2_console.png" alt="ps2 console"><h4 class="console_name">PlayStation 2</h4></a>
-                        <h5 class="price">7.000 kr</h5>
-                    </div>
-
-                    <div>
-                        <a href=""><img class="image_product" src="../static/img/sega_console.png" alt="sega console"><h4 class="console_name">SEGA Mega Drive</h4></a>
-                        <h5 class="price">3.000 kr</h5>
-                    </div>
-
-                    <div>
-                        <a href=""><img class="image_product" src="../static/img/nes_console.png" alt="nes console"><h4 class="console_name">Nintendo NES console</h4></a>
-                        <h5 class="price">5.000 kr</h5>
-                    </div>
-                    {% endcomment %}
                 {% endfor %}
-            </div>
+                {% else %}
+                <br>
+                <h1>NO Products</h1>
+                <br>
+                {% endif %}
+                </div>
+                </div>
 
         </div>
-
-    </body>
-
 {% endblock %}
