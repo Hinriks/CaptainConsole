@@ -91,17 +91,17 @@
 
         <div class="col-md-12 box">
             <label>Card Holder Name</label>
-            <input class="form-control" type="text" value="Jón Jónsson" disabled>
+            <input class="form-control" type="text" placeholder="FULL NAME">
         </div>
 
         <div class="col-md-8 box">
             <label>Credit Card Number</label>
-            <input class="form-control" type="text" value="XXXX-XXXX-XXXX-1234" disabled>
+            <input class="form-control" type="text" placeholder="XXXX-XXXX-XXXX-XXXX">
         </div>
 
         <div class="col-md-4 box">
             <label>CVC</label>
-            <input class="form-control" type="text" value="XX1" disabled>
+            <input class="form-control" type="text" placeholder="XXX">
         </div>
 
         <div class="col-md-12 box">
@@ -150,26 +150,87 @@
 <div class="container bottom-space col-md-8 col-md-offset-2" id="checkout_review" >
     <div class="row">
 
+        <h4 class="col-md-8 top-space">GENERAL INFORMATION</h4>
+
         <div class="col-md-12 top-space">
-            <h6 >EMAIL ADDRESS</h6>
-            <input type="text" class="form-control" placeholder="EMAIL ADDRESS" value="{{ user.email }}">
+            <label>Full name</label>
+            <input class="form-control" type="text" value="FULL NAME" disabled>
         </div>
 
-        <div class="col-md-12 top-space">
-            <h6>DELIVERY INFORMATION</h6>
+        <div class="col-md-12">
+            <label>Email address</label>
+            <input class="form-control" type="text" value="EMAIL ADDRESS" disabled>
+        </div>
 
-            <input class="form-control" type="text" placeholder="FULL NAME" value="{{ user.full_name }}">
-            <input class="form-control" type="text" placeholder="ADDRESS" value="{{ user.address }}">
-            <input class="form-control" type="text" placeholder="APT/SUITE" value="{{ user.apt }}">
-            <input class="form-control" type="text" placeholder="CITY/TOWN" value="{{ user.city }}">
-            <input class="form-control" type="text" placeholder="ZIP" value="{{ user.zip }}">
-            <input class="form-control" type="text" placeholder="COUNTRY" value="{{ user.country }}">
+        <div class="col-md-12">
+            <label>Phone Number</label>
+            <input class="form-control" type="text" value="PHONE NUMBER" disabled>
+        </div>
+
+
+        <h4 class="col-md-8 top-space">SHIPPING ADDRESS</h4>
+        <div class="col-md-12">
+            <label>Address</label>
+            <input class="form-control" type="text" value="ADDRESS" disabled>
+        </div>
+        <div class="col-md-12">
+            <label>Apt/Suite</label>
+            <input class="form-control" type="text" value="APT/SUITE" disabled>
+        </div>
+        <div class="col-md-8">
+            <label>City/Town</label>
+            <input class="form-control" type="text" value="CITY/TOWN" disabled>
+        </div>
+        <div class="col-md-4">
+            <label>Zip</label>
+            <input class="form-control" type="text" value="ZIP" disabled>
+        </div>
+
+        <div class="col-md-4">
+            <label>Country</label>
+            <input class="form-control" type="text" value="Country" disabled>
+        </div>
+
+
+    </div>
+   <div class="row">
+        <h4 class="col-md-12">BILLING INFORMATION</h4>
+        <h5 class="col-md-12">CREDIT CARD</h5>
+
+        <div class="col-md-12 box">
+            <label>Card Holder Name</label>
+            <input class="form-control" type="text" value="Jón Jónsson" disabled>
+        </div>
+
+        <div class="col-md-8 box">
+            <label>Credit Card Number</label>
+            <input class="form-control" type="text" value="XXXX-XXXX-XXXX-1234" disabled>
+        </div>
+
+        <div class="col-md-4 box">
+            <label>CVC</label>
+            <input class="form-control" type="text" value="XX1" disabled>
+        </div>
+
+        <div class="col-md-12 box">
+            <label>Expiration Date</label>
+        </div>
+
+        <div class="col-md-4 box">
+            <label>Month</label>
+            <input class="form-control" type="text" value="7" disabled>
+        </div>
+
+        <div class="col-md-4 box">
+            <label>Year</label>
+            <input class="form-control" type="text" value="2022" disabled>
         </div>
 
     </div>
+    <h4>Order Summary</h4>
+    <hr>
 
         <div class="row product">
-            <hr>
             <div class="col-sm-4">
                 <div class="colLeft"><img src="../static/img/nes_console.png" class="productImg" alt="nes console"></div>
             </div>
