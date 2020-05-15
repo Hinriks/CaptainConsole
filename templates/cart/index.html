@@ -9,7 +9,7 @@
             <div class="container">
                 {% for cartitem in cartitems %}
 
-                <div class="row product">
+                <div class="row product hover">
                     <div class="col-sm-4">
                         <div class="colLeft"><img src="{{ cartitem.product.productimage_set.first.image }}" class="productImg" alt="nes console"></div>
                     </div>
@@ -51,9 +51,9 @@
                 {% else %}
             </div>
                 <h3> Total: {{cartitems.first.cart.total}}kr</h3>
-                <button type="button" class="btn btn-primary checkout">CHECKOUT</button>
+                <a href="{% url 'product-index' %}"><button type="button" class="btn btn-primary checkout">CHECKOUT</button></a>
             {% endif %}
          {% else %}
-              <h1> user is not logged in</h1>
+              <h1> User is not logged in.</h1>
           {% endif %}
 {% endblock %}
