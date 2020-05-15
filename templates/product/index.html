@@ -4,25 +4,17 @@
     <link href="{% static 'css/catalog.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/shopping_cart.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/popular_products.css' %}" rel="stylesheet" type="text/css">
-
+    {% include 'menu.html' with cats=cats %}
     <h1 class="titleText">Catalog</h1>
     <hr>
     <div class="container col-md-10 col-md-offset-1">
         <div class="row">
             <div class="sortBy">
-                <label>Sort by:
-                    <select name="sort">
-                        <option value="name">Name</option>
-                        <option value="price">Price</option>
-                    </select>
-                </label>
-            </div>
-            <div class="filterBy">
-                <label>Filter by:
-                    <select name="filter">
-                        <option>virkar ekki hehe</option>
-                    </select>
-                </label>
+                <div><p>Sort by:</p></div>
+                <div id="sort-price-low" class="btn btn-primary">Price low</div>
+                <div id="sort-price-high" class="btn btn-primary">Price high</div>
+                <div id="sort-name-1" class="btn btn-primary">Name A-Z</div>
+                <div id="sort-name-2" class="btn btn-primary">Name Z-A</div>
             </div>
 
         <div class="products">
@@ -45,4 +37,24 @@
             </div>
 
     </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+    $('#sort-price-low').click(function(e) {
+        e.preventDefault();
+        window.location.replace(location.protocol + '//' + location.host + '/product/sort/price/0')
+    })
+    $('#sort-price-high').click(function(e) {
+        e.preventDefault();
+        window.location.replace(location.protocol + '//' + location.host + '/product/sort/price/1')
+    })
+    $('#sort-name-1').click(function(e) {
+        e.preventDefault();
+        window.location.replace(location.protocol + '//' + location.host + '/product/sort/name/0')
+    })
+    $('#sort-name-2').click(function(e) {
+        e.preventDefault();
+        window.location.replace(location.protocol + '//' + location.host + '/product/sort/name/1')
+    })
+</script>
 {% endblock %}
